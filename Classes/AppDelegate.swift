@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Lock Bear
+//  LockBear
 //
-//  Created by Teodor Rotaru on 17/06/2019.
-//  Copyright © 2019 Flavian Rotaru. All rights reserved.
+//  Created by Flavian Rotaru on 08/10/2018.
+//  Copyright © 2016 Flavian Rotaru. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let mainCommandHandler = MainCommandHandler()
+        
+        self.window = UIWindow()
+        self.window?.rootViewController = mainCommandHandler.mainViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

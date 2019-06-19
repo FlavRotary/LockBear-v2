@@ -1,0 +1,36 @@
+PODS:
+  - GBFloatingTextField (1.0.5)
+  - IQKeyboardManager (6.4.0)
+  - KeychainSwift (16.0.1)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
+  - SQLite.swift (0.12.0):
+    - SQLite.swift/standard (= 0.12.0)
+  - SQLite.swift/standard (0.12.0)
+
+DEPENDENCIES:
+  - GBFloatingTextField (~> 1.0)
+  - IQKeyboardManager
+  - KeychainSwift
+  - NVActivityIndicatorView
+  - SQLite.swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GBFloatingTextField
+    - IQKeyboardManager
+    - KeychainSwift
+    - NVActivityIndicatorView
+    - SQLite.swift
+
+SPEC CHECKSUMS:
+  GBFloatingTextField: 7978002fe5c0f5452328e210f73900face8c167f
+  IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
+  KeychainSwift: 4209611373ca4a098e09b1e547eebd87c544dcc4
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  SQLite.swift: 7cad9db150a03716336e69469ec9559c85aece5b
+
+PODFILE CHECKSUM: 37aa9111a88613f7a7e3e691dff4e958492c7887
+
+COCOAPODS: 1.6.2
