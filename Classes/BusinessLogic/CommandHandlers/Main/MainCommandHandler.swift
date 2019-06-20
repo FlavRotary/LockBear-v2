@@ -70,7 +70,10 @@ class MainCommandHandler {
         }
         
         loginCommandHandler = LoginCommandHandler()
-        mainViewController.present(loginCommandHandler!.mainViewController, animated: animated, completion: nil)
+        if let loginCommandHandler = loginCommandHandler, let loginMainViewController = loginCommandHandler.mainViewController {
+            mainViewController.present(loginMainViewController, animated: animated, completion: nil)
+        }
+        
         
     }
     

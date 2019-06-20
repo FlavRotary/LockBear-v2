@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8127E7D322BBD74D00B58A3C /* AuthViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */; };
+		8127E7D522BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */; };
 		81A626B922B78B8400CB8899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A626B722B78B8400CB8899 /* LaunchScreen.storyboard */; };
 		81A626E222B78BC700CB8899 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A626C522B78BC700CB8899 /* LoginViewController.xib */; };
 		81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A626C622B78BC700CB8899 /* LoginViewController.swift */; };
@@ -72,13 +74,14 @@
 		81A6278A22B7D03B00CB8899 /* SettingsSimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6278822B7D03B00CB8899 /* SettingsSimpleTableViewCell.swift */; };
 		81A6278B22B7D03B00CB8899 /* SettingsSimpleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6278922B7D03B00CB8899 /* SettingsSimpleTableViewCell.xib */; };
 		81A6278E22B7D1FA00CB8899 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6278D22B7D1FA00CB8899 /* LoginViewModel.swift */; };
-		81A6279022B7D26100CB8899 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6278F22B7D26100CB8899 /* LoginViewModelProtocol.swift */; };
 		81A6279322B7D51F00CB8899 /* LoginCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6271122B7B76900CB8899 /* LoginCommandHandlerProtocol.swift */; };
 		DA816F34557AB8239AD7190E /* Pods_Lock_Bear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA6DB2156BE4424C547FB46 /* Pods_Lock_Bear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2BB0525A6DEC44E8E36B10D7 /* Pods-Lock Bear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.release.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.release.xcconfig"; sourceTree = "<group>"; };
+		8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelProtocol.swift; sourceTree = "<group>"; };
+		8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerProtocol.swift; sourceTree = "<group>"; };
 		81A626AB22B78B8300CB8899 /* Lock Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A626B822B78B8400CB8899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A626BA22B78B8400CB8899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,7 +150,6 @@
 		81A6278822B7D03B00CB8899 /* SettingsSimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSimpleTableViewCell.swift; sourceTree = "<group>"; };
 		81A6278922B7D03B00CB8899 /* SettingsSimpleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSimpleTableViewCell.xib; sourceTree = "<group>"; };
 		81A6278D22B7D1FA00CB8899 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		81A6278F22B7D26100CB8899 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
 		821B49B9E9D1811A1F823512 /* Pods-Lock Bear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.debug.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.debug.xcconfig"; sourceTree = "<group>"; };
 		AFA6DB2156BE4424C547FB46 /* Pods_Lock_Bear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lock_Bear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -343,6 +345,7 @@
 		81A626D822B78BC700CB8899 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -351,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				81A6271122B7B76900CB8899 /* LoginCommandHandlerProtocol.swift */,
-				81A6278F22B7D26100CB8899 /* LoginViewModelProtocol.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -450,6 +452,7 @@
 		81A626FC22B7A17B00CB8899 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */,
 				81A626D822B78BC700CB8899 /* Register */,
 				81A626D922B78BC700CB8899 /* Login */,
 			);
@@ -847,11 +850,11 @@
 				81A6273922B7C42A00CB8899 /* SiteActionsViewController.swift in Sources */,
 				81A6279322B7D51F00CB8899 /* LoginCommandHandlerProtocol.swift in Sources */,
 				81A626FB22B797D400CB8899 /* SitesCommandHandlerProtocol.swift in Sources */,
+				8127E7D522BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift in Sources */,
 				81A6278122B7CF4A00CB8899 /* SiteCategory.swift in Sources */,
 				81A6276F22B7CDBD00CB8899 /* KeychainManager.swift in Sources */,
 				81A6277522B7CE9200CB8899 /* AESCrypter.swift in Sources */,
 				81A626E822B78BC700CB8899 /* SitesViewModelDelegate.swift in Sources */,
-				81A6279022B7D26100CB8899 /* LoginViewModelProtocol.swift in Sources */,
 				81A6272E22B7C32100CB8899 /* AddSiteViewController.swift in Sources */,
 				81A626E622B78BC700CB8899 /* SitesViewModel.swift in Sources */,
 				81A6276022B7C97C00CB8899 /* RegisterCommandHandler.swift in Sources */,
@@ -873,6 +876,7 @@
 				81A6277F22B7CF0D00CB8899 /* Settings.swift in Sources */,
 				81A6277B22B7CEE700CB8899 /* ButtonTableViewCell.swift in Sources */,
 				81A6275B22B7C90800CB8899 /* TextFieldTableViewCell.swift in Sources */,
+				8127E7D322BBD74D00B58A3C /* AuthViewModelProtocol.swift in Sources */,
 				81A6272922B7C2DB00CB8899 /* UpdateSiteViewController.swift in Sources */,
 				81A626E522B78BC700CB8899 /* SitesViewController.swift in Sources */,
 				81A6278622B7D02100CB8899 /* SettingsSwitchTableViewCell.swift in Sources */,

@@ -10,10 +10,24 @@ import UIKit
 
 class RegisterViewController: BaseViewController {
 
+    weak var commandHandler: RegisterCommandHandlerProtocol?
+    
+    required init(with commandHandler: RegisterCommandHandlerProtocol?) {
+        super.init(nibName: String(describing: RegisterViewController.self), bundle: nil)
+        self.title = "Register"
+        self.commandHandler = commandHandler
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
 
 
