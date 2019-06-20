@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIImage{
+    func resize (width: CGFloat, height: CGFloat)-> UIImage{
+        UIGraphicsBeginImageContext(CGSize(width: width, height: height))
+        self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()!
+        return newImage
+    }
+}
