@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MainCommandHandler {
+class MainCommandHandler: LoginCommandHandlerDelegate {
     
     var mainViewController: UIViewController
     private var sitesCommandHandler: SitesCommandHandler
@@ -70,11 +70,19 @@ class MainCommandHandler {
         }
         
         loginCommandHandler = LoginCommandHandler()
+        loginCommandHandler?.delegate = self
         if let loginCommandHandler = loginCommandHandler, let loginMainViewController = loginCommandHandler.mainViewController {
             mainViewController.present(loginMainViewController, animated: animated, completion: nil)
         }
         
         
+    }
+    
+    //MARK: - LoginCommandHandlerDelegate
+    
+    func didDismissLogin() {
+        loginCommandHandler?.delegate = nil
+        loginCommandHandler = nil
     }
     
 }

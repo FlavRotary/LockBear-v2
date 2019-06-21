@@ -31,10 +31,18 @@ class RegisterCommandHandler: RegisterCommandHandlerProtocol {
             
             if viewModel.settings == nil {
                 viewModel.settings = Settings()
-                viewModel.settings?.vaultPassword = password
+                do {
+                    try viewModel.settings?.setNewPassword(password: password)
+                } catch {
+                    viewModel.settings = nil
+                    if let mainViewController = self.mainViewController {
+                        UIAlertController.showErrorAlert(error.localizedDescription, mainViewController)
+                    }
+                    return
+                }
                 viewModel.settings?.useBioAuth = true
                 
-                //TODO: save settings
+                UserDefaultsManager.shared.saveSettings(settings: viewModel.settings)
             }
         }
         

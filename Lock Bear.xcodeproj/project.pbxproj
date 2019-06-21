@@ -10,6 +10,8 @@
 		8127E7D322BBD74D00B58A3C /* AuthViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */; };
 		8127E7D522BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */; };
 		8127E7D722BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D622BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift */; };
+		8127E7D922BD69BA00B58A3C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D822BD69BA00B58A3C /* UserDefaultsManager.swift */; };
+		8127E7DB22BD747100B58A3C /* LoginCommandHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7DA22BD747100B58A3C /* LoginCommandHandlerDelegate.swift */; };
 		81A626B922B78B8400CB8899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A626B722B78B8400CB8899 /* LaunchScreen.storyboard */; };
 		81A626E222B78BC700CB8899 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A626C522B78BC700CB8899 /* LoginViewController.xib */; };
 		81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A626C622B78BC700CB8899 /* LoginViewController.swift */; };
@@ -84,6 +86,8 @@
 		8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelProtocol.swift; sourceTree = "<group>"; };
 		8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerProtocol.swift; sourceTree = "<group>"; };
 		8127E7D622BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerDelegate.swift; sourceTree = "<group>"; };
+		8127E7D822BD69BA00B58A3C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		8127E7DA22BD747100B58A3C /* LoginCommandHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCommandHandlerDelegate.swift; sourceTree = "<group>"; };
 		81A626AB22B78B8300CB8899 /* Lock Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A626B822B78B8400CB8899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A626BA22B78B8400CB8899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -357,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				81A6271122B7B76900CB8899 /* LoginCommandHandlerProtocol.swift */,
+				8127E7DA22BD747100B58A3C /* LoginCommandHandlerDelegate.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 			children = (
 				81A6276A22B7CD9600CB8899 /* SqliteManager.swift */,
 				81A6276E22B7CDBD00CB8899 /* KeychainManager.swift */,
+				8127E7D822BD69BA00B58A3C /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -842,6 +848,7 @@
 			files = (
 				81A6277122B7CDCF00CB8899 /* UIImageViewExtensions.swift in Sources */,
 				81A6275E22B7C95D00CB8899 /* UpdateSettingCommandHandler.swift in Sources */,
+				8127E7D922BD69BA00B58A3C /* UserDefaultsManager.swift in Sources */,
 				81A626EB22B78BC700CB8899 /* AppDelegate.swift in Sources */,
 				81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */,
 				81A626F622B7948F00CB8899 /* MainCommandHandler.swift in Sources */,
@@ -866,6 +873,7 @@
 				81A6270622B7A6FB00CB8899 /* SettingsViewController.swift in Sources */,
 				81A6271F22B7C23E00CB8899 /* GeneratePassViewController.swift in Sources */,
 				81A6271422B7B7AC00CB8899 /* LoginCommandHandler.swift in Sources */,
+				8127E7DB22BD747100B58A3C /* LoginCommandHandlerDelegate.swift in Sources */,
 				81A6277322B7CE2100CB8899 /* SqliteTables.swift in Sources */,
 				81A6276B22B7CD9600CB8899 /* SqliteManager.swift in Sources */,
 				81A6276D22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift in Sources */,

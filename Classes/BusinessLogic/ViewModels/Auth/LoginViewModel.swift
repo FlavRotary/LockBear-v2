@@ -15,10 +15,25 @@ class AuthViewModel: AuthViewModelProtocol {
     
     required init() {
         
+        settings = UserDefaultsManager.shared.retrieveSettings()
+        
     }
     
     func getBiometryType() -> LABiometryType {
         let context = LAContext()
+        
+        var policy: LAPolicy?
+        policy = .deviceOwnerAuthenticationWithBiometrics
+        var err: NSError?
+        guard context.canEvaluatePolicy(policy!, error: &err) else
+        {
+            if #available(iOS 11.2, *) {
+                return .none
+            } else {
+                return .LABiometryNone
+            }
+        }
+        
         return context.biometryType
     }
 }
