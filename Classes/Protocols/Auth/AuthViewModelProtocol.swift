@@ -1,5 +1,5 @@
 //
-//  LoginViewModelProtocol.swift
+//  AuthViewModelProtocol.swift
 //  Lock Bear
 //
 //  Created by Teodor Rotaru on 17/06/2019.
@@ -9,9 +9,9 @@
 import Foundation
 import LocalAuthentication
 
-protocol LoginViewModelProtocol: class {
+protocol AuthViewModelProtocol: class {
     
-    var settings: Settings? {get}
+    var settings: Settings? {get set}
     func getBiometryType() -> LABiometryType
     
 }

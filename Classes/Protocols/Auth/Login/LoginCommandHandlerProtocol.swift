@@ -10,7 +10,7 @@ import Foundation
 
 protocol LoginCommandHandlerProtocol : class {
     
-    var viewModel: LoginViewModel {get}
+    var viewModel: AuthViewModelProtocol {get}
     
     func tryBiometricLogin()
     func didPressLogin(_ password: String)

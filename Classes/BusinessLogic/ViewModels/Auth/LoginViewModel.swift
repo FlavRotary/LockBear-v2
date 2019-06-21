@@ -1,5 +1,5 @@
 //
-//  LoginViewModel.swift
+//  LAuthViewModel.swift
 //  Lock Bear
 //
 //  Created by Teodor Rotaru on 17/06/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import LocalAuthentication
 
-class LoginViewModel: LoginViewModelProtocol {
+class AuthViewModel: AuthViewModelProtocol {
     
     var settings: Settings?
     
