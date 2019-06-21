@@ -75,11 +75,11 @@
 		81A6278B22B7D03B00CB8899 /* SettingsSimpleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6278922B7D03B00CB8899 /* SettingsSimpleTableViewCell.xib */; };
 		81A6278E22B7D1FA00CB8899 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6278D22B7D1FA00CB8899 /* LoginViewModel.swift */; };
 		81A6279322B7D51F00CB8899 /* LoginCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6271122B7B76900CB8899 /* LoginCommandHandlerProtocol.swift */; };
-		DA816F34557AB8239AD7190E /* Pods_Lock_Bear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA6DB2156BE4424C547FB46 /* Pods_Lock_Bear.framework */; };
+		AB64577E8527776555908F9C /* Pods_Lock_Bear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25F247431C98E078EE1946 /* Pods_Lock_Bear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2BB0525A6DEC44E8E36B10D7 /* Pods-Lock Bear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.release.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.release.xcconfig"; sourceTree = "<group>"; };
+		1CFBED5BA4753CC39509AC4F /* Pods-Lock Bear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.release.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.release.xcconfig"; sourceTree = "<group>"; };
 		8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelProtocol.swift; sourceTree = "<group>"; };
 		8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerProtocol.swift; sourceTree = "<group>"; };
 		81A626AB22B78B8300CB8899 /* Lock Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,8 +150,8 @@
 		81A6278822B7D03B00CB8899 /* SettingsSimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSimpleTableViewCell.swift; sourceTree = "<group>"; };
 		81A6278922B7D03B00CB8899 /* SettingsSimpleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSimpleTableViewCell.xib; sourceTree = "<group>"; };
 		81A6278D22B7D1FA00CB8899 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		821B49B9E9D1811A1F823512 /* Pods-Lock Bear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.debug.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.debug.xcconfig"; sourceTree = "<group>"; };
-		AFA6DB2156BE4424C547FB46 /* Pods_Lock_Bear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lock_Bear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B331E967C893D2C73DE3377E /* Pods-Lock Bear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.debug.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.debug.xcconfig"; sourceTree = "<group>"; };
+		DC25F247431C98E078EE1946 /* Pods_Lock_Bear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lock_Bear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,28 +159,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA816F34557AB8239AD7190E /* Pods_Lock_Bear.framework in Frameworks */,
+				AB64577E8527776555908F9C /* Pods_Lock_Bear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0ACA4B21819822F22701F5BD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AFA6DB2156BE4424C547FB46 /* Pods_Lock_Bear.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		81A626A222B78B8300CB8899 = {
 			isa = PBXGroup;
 			children = (
 				81A626AD22B78B8300CB8899 /* Lock Bear */,
 				81A626AC22B78B8300CB8899 /* Products */,
 				8FCC7F4E4F025D5EF8D7C57F /* Pods */,
-				0ACA4B21819822F22701F5BD /* Frameworks */,
+				E7A79547ADE5A97874F3AE49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -687,10 +679,18 @@
 		8FCC7F4E4F025D5EF8D7C57F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				821B49B9E9D1811A1F823512 /* Pods-Lock Bear.debug.xcconfig */,
-				2BB0525A6DEC44E8E36B10D7 /* Pods-Lock Bear.release.xcconfig */,
+				B331E967C893D2C73DE3377E /* Pods-Lock Bear.debug.xcconfig */,
+				1CFBED5BA4753CC39509AC4F /* Pods-Lock Bear.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E7A79547ADE5A97874F3AE49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC25F247431C98E078EE1946 /* Pods_Lock_Bear.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -700,11 +700,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81A626BD22B78B8400CB8899 /* Build configuration list for PBXNativeTarget "Lock Bear" */;
 			buildPhases = (
-				DCB9B06949578A9E29F288B7 /* [CP] Check Pods Manifest.lock */,
+				C715023B351BF4AA9EC05489 /* [CP] Check Pods Manifest.lock */,
 				81A626A722B78B8300CB8899 /* Sources */,
 				81A626A822B78B8300CB8899 /* Frameworks */,
 				81A626A922B78B8300CB8899 /* Resources */,
-				B06B983808ABE6CF4B03CF7A /* [CP] Embed Pods Frameworks */,
+				BEF64C2DB90B2A11E1BE158E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -778,37 +778,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B06B983808ABE6CF4B03CF7A /* [CP] Embed Pods Frameworks */ = {
+		BEF64C2DB90B2A11E1BE158E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lock Bear/Pods-Lock Bear-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GBFloatingTextField/GBFloatingTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Lock Bear/Pods-Lock Bear-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GBFloatingTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Lock Bear/Pods-Lock Bear-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lock Bear/Pods-Lock Bear-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DCB9B06949578A9E29F288B7 /* [CP] Check Pods Manifest.lock */ = {
+		C715023B351BF4AA9EC05489 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1021,7 +1008,7 @@
 		};
 		81A626BE22B78B8400CB8899 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 821B49B9E9D1811A1F823512 /* Pods-Lock Bear.debug.xcconfig */;
+			baseConfigurationReference = B331E967C893D2C73DE3377E /* Pods-Lock Bear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -1042,7 +1029,7 @@
 		};
 		81A626BF22B78B8400CB8899 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BB0525A6DEC44E8E36B10D7 /* Pods-Lock Bear.release.xcconfig */;
+			baseConfigurationReference = 1CFBED5BA4753CC39509AC4F /* Pods-Lock Bear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
