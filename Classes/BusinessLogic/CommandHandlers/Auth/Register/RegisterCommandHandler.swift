@@ -15,6 +15,7 @@ class RegisterCommandHandler: RegisterCommandHandlerProtocol {
     weak var navigationController: UINavigationController?
     private var registerViewController: RegisterViewController?
     weak var viewModel: AuthViewModelProtocol?
+    weak var delegate: RegisterCommnadHandlerDelegate?
     
     required init() {
         
@@ -38,6 +39,7 @@ class RegisterCommandHandler: RegisterCommandHandlerProtocol {
         }
         
         self.navigationController?.popViewController(animated: true)
+        self.delegate?.didDismissRegister()
         
     }
     

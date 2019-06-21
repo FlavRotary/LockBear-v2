@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoginCommandHandler: LoginCommandHandlerProtocol {
+class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDelegate {
     
     //MARK: - Vars
     
@@ -55,12 +55,20 @@ class LoginCommandHandler: LoginCommandHandlerProtocol {
         }
         
         registerCommandHandler = RegisterCommandHandler()
+        registerCommandHandler?.delegate = self
         registerCommandHandler?.viewModel = self.viewModel
         registerCommandHandler?.navigationController = self.navigationController
         if let registerMainViewController = registerCommandHandler?.mainViewController {
             self.navigationController.pushViewController(registerMainViewController, animated: true)
         }
         
+    }
+    
+    //MARK: - RegisterCommandHandlerDelegate
+    
+    func didDismissRegister() {
+        registerCommandHandler?.delegate = nil
+        registerCommandHandler = nil
     }
     
     //MARK: - Protocol Functions

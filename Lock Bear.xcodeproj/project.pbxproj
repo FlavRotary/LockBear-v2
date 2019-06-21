@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8127E7D322BBD74D00B58A3C /* AuthViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */; };
 		8127E7D522BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */; };
+		8127E7D722BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D622BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift */; };
 		81A626B922B78B8400CB8899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A626B722B78B8400CB8899 /* LaunchScreen.storyboard */; };
 		81A626E222B78BC700CB8899 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A626C522B78BC700CB8899 /* LoginViewController.xib */; };
 		81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A626C622B78BC700CB8899 /* LoginViewController.swift */; };
@@ -82,6 +83,7 @@
 		2BB0525A6DEC44E8E36B10D7 /* Pods-Lock Bear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.release.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.release.xcconfig"; sourceTree = "<group>"; };
 		8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelProtocol.swift; sourceTree = "<group>"; };
 		8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerProtocol.swift; sourceTree = "<group>"; };
+		8127E7D622BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerDelegate.swift; sourceTree = "<group>"; };
 		81A626AB22B78B8300CB8899 /* Lock Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A626B822B78B8400CB8899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A626BA22B78B8400CB8899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */,
+				8127E7D622BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -875,6 +878,7 @@
 				81A6271022B7B29400CB8899 /* BaseViewController.swift in Sources */,
 				81A6277F22B7CF0D00CB8899 /* Settings.swift in Sources */,
 				81A6277B22B7CEE700CB8899 /* ButtonTableViewCell.swift in Sources */,
+				8127E7D722BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift in Sources */,
 				81A6275B22B7C90800CB8899 /* TextFieldTableViewCell.swift in Sources */,
 				8127E7D322BBD74D00B58A3C /* AuthViewModelProtocol.swift in Sources */,
 				81A6272922B7C2DB00CB8899 /* UpdateSiteViewController.swift in Sources */,
