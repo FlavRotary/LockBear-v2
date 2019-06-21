@@ -109,6 +109,15 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     }
     @IBAction func loginAction(_ sender: Any) {
         passTextField.resignFirstResponder()
+        
+        if passTextField.text?.count == 0 {
+            
+            UIAlertController.showErrorAlert("Please type in the password.", self)
+            
+            return
+            
+        }
+        
         self.commandHandler?.didPressLogin(passTextField.text ?? "")
     }
     @IBAction func biometricAuthAction(_ sender: Any) {
