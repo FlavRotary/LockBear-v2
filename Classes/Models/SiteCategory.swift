@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class SiteCategory {
+    var id: Int?
+    var name: String?
+    var sites: [Site]? // Because of your ultimatum: Your way or the highway >:P
+
+    init(_ id: Int, _ name: String,_ sites: [Site]) {
+        self.id = id
+        self.name = name
+        self.sites = sites
+    }
+}
