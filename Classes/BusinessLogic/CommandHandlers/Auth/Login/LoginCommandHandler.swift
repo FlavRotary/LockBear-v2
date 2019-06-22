@@ -90,12 +90,13 @@ class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDe
         }
         let reason = "The Bear wants to use your \(bioTypeString) to login."
         let context = LAContext()
+//        context.maxBiometryFailures = 1
         context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason ) { success, error in
             
             if success {
                 
                 // Move to the main thread because a state update triggers UI changes.
-                DispatchQueue.main.async { [unowned self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) { [unowned self] in
                     self.loginSuccessfull()
                 }
                 
@@ -104,21 +105,23 @@ class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDe
                 
                 // Fall back to a asking for username and password.
                 
+                context.invalidate()
+                
                 let alert = UIAlertController(title: "Failed", message: "\(bioTypeString.capitalizingFirstLetter()) failed.", preferredStyle: .alert)
                 let tryAgain = UIAlertAction(title: "Try again", style: .default, handler: { (action) in
-                    
+
                     DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
                         self.tryBiometricLogin()
                     }
-                    
+
                 })
                 alert.addAction(tryAgain)
                 let cancel = UIAlertAction(title: "Use password", style: .cancel, handler: { (alert) in
-                    
+
                 })
                 alert.addAction(cancel)
                 self.mainViewController?.present(alert, animated: true, completion: {
-                    
+
                 })
                 
             }

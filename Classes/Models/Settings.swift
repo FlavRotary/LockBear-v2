@@ -43,14 +43,14 @@ class Settings {
         
     }
     
-    func setNewPassword(password: String) throws{
+    func setNewPassword(password: String) throws {
         
-        vaultPassword = password.md5()
-        
-        let regexPattern = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8}$"
+        let regexPattern = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}$"
         let regexTest = NSPredicate(format:"SELF MATCHES %@", regexPattern)
         if regexTest.evaluate(with: password) == false {
             throw NSError(domain: "com.lockbear", code: 100, userInfo: [NSLocalizedDescriptionKey: "The password is too weak. The bear asks for a password of at least 8 characters and with at least one uppercase letter, one lowercase letter and one number."])
+        } else {
+            vaultPassword = password.md5()
         }
     }
     
