@@ -11,11 +11,15 @@ import UIKit
 
 class RegisterCommandHandler: RegisterCommandHandlerProtocol {
     
+    //MARK: - Vars
+    
     weak var mainViewController: UIViewController?
     weak var navigationController: UINavigationController?
     private var registerViewController: RegisterViewController?
     weak var viewModel: AuthViewModelProtocol?
     weak var delegate: RegisterCommnadHandlerDelegate?
+    
+    //MARK: - Init
     
     required init() {
         
@@ -25,17 +29,29 @@ class RegisterCommandHandler: RegisterCommandHandlerProtocol {
         
     }
     
+    //MARK: - Protocol functions
+    
     func register(with password: String!) {
         
         if let viewModel = viewModel {
             
             if viewModel.settings == nil {
                 viewModel.settings = Settings()
-                viewModel.settings?.vaultPassword = password
                 viewModel.settings?.useBioAuth = true
-                
-                //TODO: save settings
             }
+            
+            do {
+                try viewModel.settings?.setNewPassword(password: password)
+            } catch {
+                viewModel.settings = nil
+                if let mainViewController = self.mainViewController {
+                    UIAlertController.showErrorAlert(error.localizedDescription, mainViewController)
+                }
+                return
+            }
+            
+            
+            UserDefaultsManager.shared.saveSettings(settings: viewModel.settings)
         }
         
         self.navigationController?.popViewController(animated: true)

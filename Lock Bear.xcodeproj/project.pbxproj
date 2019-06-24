@@ -3,13 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8127E7D322BBD74D00B58A3C /* AuthViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */; };
 		8127E7D522BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */; };
 		8127E7D722BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D622BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift */; };
+		8127E7D922BD69BA00B58A3C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D822BD69BA00B58A3C /* UserDefaultsManager.swift */; };
+		8127E7DB22BD747100B58A3C /* LoginCommandHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7DA22BD747100B58A3C /* LoginCommandHandlerDelegate.swift */; };
+		8127E7DD22BE3F2600B58A3C /* SettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7DC22BE3F2600B58A3C /* SettingType.swift */; };
+		8127E7DF22BE43EA00B58A3C /* UITableVIewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7DE22BE43EA00B58A3C /* UITableVIewCellExtension.swift */; };
+		8127E7E222BE456D00B58A3C /* SettingTypeEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7E122BE456D00B58A3C /* SettingTypeEnums.swift */; };
+		8127E7E422BE596300B58A3C /* docs in Resources */ = {isa = PBXBuildFile; fileRef = 8127E7E322BE596300B58A3C /* docs */; };
+		8127E7EC22BE5A4D00B58A3C /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7EA22BE5A4D00B58A3C /* ToSViewController.swift */; };
+		8127E7ED22BE5A4D00B58A3C /* BaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8127E7EB22BE5A4D00B58A3C /* BaseWebViewController.xib */; };
+		8127E7EF22BE5AFB00B58A3C /* ToSViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7EE22BE5AFB00B58A3C /* ToSViewModelProtocol.swift */; };
+		8127E7F122BE5B3E00B58A3C /* ToSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7F022BE5B3E00B58A3C /* ToSViewModel.swift */; };
 		81A626B922B78B8400CB8899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A626B722B78B8400CB8899 /* LaunchScreen.storyboard */; };
 		81A626E222B78BC700CB8899 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A626C522B78BC700CB8899 /* LoginViewController.xib */; };
 		81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A626C622B78BC700CB8899 /* LoginViewController.swift */; };
@@ -53,7 +63,7 @@
 		81A6274F22B7C58B00CB8899 /* SiteCategorySectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6274E22B7C58B00CB8899 /* SiteCategorySectionHeaderView.xib */; };
 		81A6275B22B7C90800CB8899 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6275922B7C90800CB8899 /* TextFieldTableViewCell.swift */; };
 		81A6275C22B7C90800CB8899 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6275A22B7C90800CB8899 /* TextFieldTableViewCell.xib */; };
-		81A6275E22B7C95D00CB8899 /* UpdateSettingCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6275D22B7C95D00CB8899 /* UpdateSettingCommandHandler.swift */; };
+		81A6275E22B7C95D00CB8899 /* ChangePassCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6275D22B7C95D00CB8899 /* ChangePassCommandHandler.swift */; };
 		81A6276022B7C97C00CB8899 /* RegisterCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6275F22B7C97C00CB8899 /* RegisterCommandHandler.swift */; };
 		81A6276222B7C98E00CB8899 /* UpdateSiteCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6276122B7C98E00CB8899 /* UpdateSiteCommandHandler.swift */; };
 		81A6276522B7CCEE00CB8899 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6276422B7CCEE00CB8899 /* SettingsViewModel.swift */; };
@@ -76,7 +86,14 @@
 		81A6278B22B7D03B00CB8899 /* SettingsSimpleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6278922B7D03B00CB8899 /* SettingsSimpleTableViewCell.xib */; };
 		81A6278E22B7D1FA00CB8899 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6278D22B7D1FA00CB8899 /* LoginViewModel.swift */; };
 		81A6279322B7D51F00CB8899 /* LoginCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6271122B7B76900CB8899 /* LoginCommandHandlerProtocol.swift */; };
-		AB64577E8527776555908F9C /* Pods_Lock_Bear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC25F247431C98E078EE1946 /* Pods_Lock_Bear.framework */; };
+		81FFB4EC22BE714100240581 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FFB4EB22BE714100240581 /* WebKit.framework */; };
+		81FFB4F022BE779A00240581 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FFB4EF22BE779A00240581 /* InfoViewController.swift */; };
+		81FFB4F222BE77CD00240581 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FFB4F122BE77CD00240581 /* BaseWebViewController.swift */; };
+		81FFB4F422BE792E00240581 /* InfoViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FFB4F322BE792E00240581 /* InfoViewModelProtocol.swift */; };
+		81FFB4F622BE798A00240581 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FFB4F522BE798A00240581 /* InfoViewModel.swift */; };
+		81FFB4F822BE7C3A00240581 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81FFB4F722BE7C3A00240581 /* InfoViewController.xib */; };
+		81FFB4FA22BE95F000240581 /* ChangePassCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FFB4F922BE95EF00240581 /* ChangePassCommandHandlerProtocol.swift */; };
+		DA816F34557AB8239AD7190E /* Pods_Lock_Bear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA6DB2156BE4424C547FB46 /* Pods_Lock_Bear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +101,16 @@
 		8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelProtocol.swift; sourceTree = "<group>"; };
 		8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerProtocol.swift; sourceTree = "<group>"; };
 		8127E7D622BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerDelegate.swift; sourceTree = "<group>"; };
+		8127E7D822BD69BA00B58A3C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		8127E7DA22BD747100B58A3C /* LoginCommandHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCommandHandlerDelegate.swift; sourceTree = "<group>"; };
+		8127E7DC22BE3F2600B58A3C /* SettingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingType.swift; sourceTree = "<group>"; };
+		8127E7DE22BE43EA00B58A3C /* UITableVIewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableVIewCellExtension.swift; sourceTree = "<group>"; };
+		8127E7E122BE456D00B58A3C /* SettingTypeEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTypeEnums.swift; sourceTree = "<group>"; };
+		8127E7E322BE596300B58A3C /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = "<group>"; };
+		8127E7EA22BE5A4D00B58A3C /* ToSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
+		8127E7EB22BE5A4D00B58A3C /* BaseWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseWebViewController.xib; sourceTree = "<group>"; };
+		8127E7EE22BE5AFB00B58A3C /* ToSViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSViewModelProtocol.swift; sourceTree = "<group>"; };
+		8127E7F022BE5B3E00B58A3C /* ToSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSViewModel.swift; sourceTree = "<group>"; };
 		81A626AB22B78B8300CB8899 /* Lock Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A626B822B78B8400CB8899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A626BA22B78B8400CB8899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,7 +157,7 @@
 		81A6274E22B7C58B00CB8899 /* SiteCategorySectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SiteCategorySectionHeaderView.xib; sourceTree = "<group>"; };
 		81A6275922B7C90800CB8899 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		81A6275A22B7C90800CB8899 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
-		81A6275D22B7C95D00CB8899 /* UpdateSettingCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSettingCommandHandler.swift; sourceTree = "<group>"; };
+		81A6275D22B7C95D00CB8899 /* ChangePassCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassCommandHandler.swift; sourceTree = "<group>"; };
 		81A6275F22B7C97C00CB8899 /* RegisterCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandler.swift; sourceTree = "<group>"; };
 		81A6276122B7C98E00CB8899 /* UpdateSiteCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSiteCommandHandler.swift; sourceTree = "<group>"; };
 		81A6276422B7CCEE00CB8899 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -152,8 +179,15 @@
 		81A6278822B7D03B00CB8899 /* SettingsSimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSimpleTableViewCell.swift; sourceTree = "<group>"; };
 		81A6278922B7D03B00CB8899 /* SettingsSimpleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSimpleTableViewCell.xib; sourceTree = "<group>"; };
 		81A6278D22B7D1FA00CB8899 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		B331E967C893D2C73DE3377E /* Pods-Lock Bear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.debug.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.debug.xcconfig"; sourceTree = "<group>"; };
-		DC25F247431C98E078EE1946 /* Pods_Lock_Bear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lock_Bear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81FFB4EB22BE714100240581 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		81FFB4EF22BE779A00240581 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		81FFB4F122BE77CD00240581 /* BaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
+		81FFB4F322BE792E00240581 /* InfoViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModelProtocol.swift; sourceTree = "<group>"; };
+		81FFB4F522BE798A00240581 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		81FFB4F722BE7C3A00240581 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		81FFB4F922BE95EF00240581 /* ChangePassCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassCommandHandlerProtocol.swift; sourceTree = "<group>"; };
+		821B49B9E9D1811A1F823512 /* Pods-Lock Bear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.debug.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.debug.xcconfig"; sourceTree = "<group>"; };
+		AFA6DB2156BE4424C547FB46 /* Pods_Lock_Bear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lock_Bear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,13 +195,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB64577E8527776555908F9C /* Pods_Lock_Bear.framework in Frameworks */,
+				81FFB4EC22BE714100240581 /* WebKit.framework in Frameworks */,
+				DA816F34557AB8239AD7190E /* Pods_Lock_Bear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ACA4B21819822F22701F5BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81FFB4EB22BE714100240581 /* WebKit.framework */,
+				AFA6DB2156BE4424C547FB46 /* Pods_Lock_Bear.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8127E7E022BE455500B58A3C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8127E7E122BE456D00B58A3C /* SettingTypeEnums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		8127E7E722BE5A1F00B58A3C /* TosViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8127E7EA22BE5A4D00B58A3C /* ToSViewController.swift */,
+			);
+			path = TosViewController;
+			sourceTree = "<group>";
+		};
 		81A626A222B78B8300CB8899 = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				81A6271122B7B76900CB8899 /* LoginCommandHandlerProtocol.swift */,
+				8127E7DA22BD747100B58A3C /* LoginCommandHandlerDelegate.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -360,6 +421,7 @@
 				81A6277422B7CE9200CB8899 /* AESCrypter.swift */,
 				81A626DE22B78BC700CB8899 /* Managers */,
 				81A626DF22B78BC700CB8899 /* Extensions */,
+				8127E7E022BE455500B58A3C /* Enums */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -369,6 +431,7 @@
 			children = (
 				81A6276A22B7CD9600CB8899 /* SqliteManager.swift */,
 				81A6276E22B7CDBD00CB8899 /* KeychainManager.swift */,
+				8127E7D822BD69BA00B58A3C /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -379,6 +442,7 @@
 				81A6276C22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift */,
 				81A6277022B7CDCF00CB8899 /* UIImageViewExtensions.swift */,
 				81A6277622B7CEA500CB8899 /* StringExtensions.swift */,
+				8127E7DE22BE43EA00B58A3C /* UITableVIewCellExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,6 +450,7 @@
 		81A626E022B78BC700CB8899 /* Resouses */ = {
 			isa = PBXGroup;
 			children = (
+				8127E7E322BE596300B58A3C /* docs */,
 				81A626E122B78BC700CB8899 /* Assets.xcassets */,
 			);
 			path = Resouses;
@@ -457,6 +522,9 @@
 		81A6270022B7A69400CB8899 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				81FFB4EE22BE774100240581 /* BaseWebViewController */,
+				81FFB4ED22BE771C00240581 /* InfoViewController */,
+				8127E7E722BE5A1F00B58A3C /* TosViewController */,
 				81A6271C22B7C20600CB8899 /* GeneratePassViewController */,
 				81A6271522B7C11D00CB8899 /* ChangePassViewController */,
 				81A6270122B7A6C000CB8899 /* SettingsViewController */,
@@ -477,7 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				81A6270922B7A76D00CB8899 /* SettingsCommandHandler.swift */,
-				81A6275D22B7C95D00CB8899 /* UpdateSettingCommandHandler.swift */,
+				81A6275D22B7C95D00CB8899 /* ChangePassCommandHandler.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -487,6 +555,9 @@
 			children = (
 				81A6270C22B7A7A400CB8899 /* SettingsCommandHandlerProtocol.swift */,
 				81A6276622B7CD5600CB8899 /* SettingsViewModelProtocol.swift */,
+				8127E7EE22BE5AFB00B58A3C /* ToSViewModelProtocol.swift */,
+				81FFB4F322BE792E00240581 /* InfoViewModelProtocol.swift */,
+				81FFB4F922BE95EF00240581 /* ChangePassCommandHandlerProtocol.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -657,6 +728,8 @@
 			isa = PBXGroup;
 			children = (
 				81A6276422B7CCEE00CB8899 /* SettingsViewModel.swift */,
+				8127E7F022BE5B3E00B58A3C /* ToSViewModel.swift */,
+				81FFB4F522BE798A00240581 /* InfoViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -667,6 +740,7 @@
 				81A6277E22B7CF0D00CB8899 /* Settings.swift */,
 				81A6278022B7CF4A00CB8899 /* SiteCategory.swift */,
 				81A6278222B7CF5300CB8899 /* Site.swift */,
+				8127E7DC22BE3F2600B58A3C /* SettingType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -677,6 +751,24 @@
 				81A6278D22B7D1FA00CB8899 /* LoginViewModel.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		81FFB4ED22BE771C00240581 /* InfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81FFB4F722BE7C3A00240581 /* InfoViewController.xib */,
+				81FFB4EF22BE779A00240581 /* InfoViewController.swift */,
+			);
+			path = InfoViewController;
+			sourceTree = "<group>";
+		};
+		81FFB4EE22BE774100240581 /* BaseWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81FFB4F122BE77CD00240581 /* BaseWebViewController.swift */,
+				8127E7EB22BE5A4D00B58A3C /* BaseWebViewController.xib */,
+			);
+			path = BaseWebViewController;
 			sourceTree = "<group>";
 		};
 		8FCC7F4E4F025D5EF8D7C57F /* Pods */ = {
@@ -764,10 +856,13 @@
 				81A6275C22B7C90800CB8899 /* TextFieldTableViewCell.xib in Resources */,
 				81A626E422B78BC700CB8899 /* SitesViewController.xib in Resources */,
 				81A6272422B7C25100CB8899 /* RegisterViewController.xib in Resources */,
+				81FFB4F822BE7C3A00240581 /* InfoViewController.xib in Resources */,
 				81A6273F22B7C46C00CB8899 /* SiteActionTableViewCell.xib in Resources */,
+				8127E7E422BE596300B58A3C /* docs in Resources */,
 				81A6274522B7C50400CB8899 /* SiteLogoTableViewCell.xib in Resources */,
 				81A6274922B7C51700CB8899 /* SiteDataTableViewCell.xib in Resources */,
 				81A6273522B7C3F000CB8899 /* SiteTableViewCell.xib in Resources */,
+				8127E7ED22BE5A4D00B58A3C /* BaseWebViewController.xib in Resources */,
 				81A6274F22B7C58B00CB8899 /* SiteCategorySectionHeaderView.xib in Resources */,
 				81A6273A22B7C42A00CB8899 /* SiteActionsViewController.xib in Resources */,
 				81A6277C22B7CEE700CB8899 /* ButtonTableViewCell.xib in Resources */,
@@ -828,13 +923,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A6277122B7CDCF00CB8899 /* UIImageViewExtensions.swift in Sources */,
-				81A6275E22B7C95D00CB8899 /* UpdateSettingCommandHandler.swift in Sources */,
+				81A6275E22B7C95D00CB8899 /* ChangePassCommandHandler.swift in Sources */,
+				8127E7D922BD69BA00B58A3C /* UserDefaultsManager.swift in Sources */,
 				81A626EB22B78BC700CB8899 /* AppDelegate.swift in Sources */,
 				81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */,
+				8127E7DF22BE43EA00B58A3C /* UITableVIewCellExtension.swift in Sources */,
 				81A626F622B7948F00CB8899 /* MainCommandHandler.swift in Sources */,
 				81A6272322B7C25100CB8899 /* RegisterViewController.swift in Sources */,
 				81A626E722B78BC700CB8899 /* SitesViewModelProtocol.swift in Sources */,
 				81A6277722B7CEA500CB8899 /* StringExtensions.swift in Sources */,
+				8127E7DD22BE3F2600B58A3C /* SettingType.swift in Sources */,
 				81A6270A22B7A76D00CB8899 /* SettingsCommandHandler.swift in Sources */,
 				81A6276522B7CCEE00CB8899 /* SettingsViewModel.swift in Sources */,
 				81A6273922B7C42A00CB8899 /* SiteActionsViewController.swift in Sources */,
@@ -847,18 +945,26 @@
 				81A626E822B78BC700CB8899 /* SitesViewModelDelegate.swift in Sources */,
 				81A6272E22B7C32100CB8899 /* AddSiteViewController.swift in Sources */,
 				81A626E622B78BC700CB8899 /* SitesViewModel.swift in Sources */,
+				81FFB4F022BE779A00240581 /* InfoViewController.swift in Sources */,
 				81A6276022B7C97C00CB8899 /* RegisterCommandHandler.swift in Sources */,
 				81A6278E22B7D1FA00CB8899 /* LoginViewModel.swift in Sources */,
 				81A6276222B7C98E00CB8899 /* UpdateSiteCommandHandler.swift in Sources */,
 				81A6270622B7A6FB00CB8899 /* SettingsViewController.swift in Sources */,
 				81A6271F22B7C23E00CB8899 /* GeneratePassViewController.swift in Sources */,
 				81A6271422B7B7AC00CB8899 /* LoginCommandHandler.swift in Sources */,
+				81FFB4F222BE77CD00240581 /* BaseWebViewController.swift in Sources */,
+				8127E7E222BE456D00B58A3C /* SettingTypeEnums.swift in Sources */,
+				8127E7DB22BD747100B58A3C /* LoginCommandHandlerDelegate.swift in Sources */,
+				8127E7EC22BE5A4D00B58A3C /* ToSViewController.swift in Sources */,
 				81A6277322B7CE2100CB8899 /* SqliteTables.swift in Sources */,
+				8127E7F122BE5B3E00B58A3C /* ToSViewModel.swift in Sources */,
+				8127E7EF22BE5AFB00B58A3C /* ToSViewModelProtocol.swift in Sources */,
 				81A6276B22B7CD9600CB8899 /* SqliteManager.swift in Sources */,
 				81A6276D22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift in Sources */,
 				81A6273022B7C32D00CB8899 /* EditSiteViewController.swift in Sources */,
 				81A6276722B7CD5600CB8899 /* SettingsViewModelProtocol.swift in Sources */,
 				81A6274422B7C50400CB8899 /* SiteLogoTableViewCell.swift in Sources */,
+				81FFB4F622BE798A00240581 /* InfoViewModel.swift in Sources */,
 				81A6278322B7CF5300CB8899 /* Site.swift in Sources */,
 				81A6274D22B7C57B00CB8899 /* SiteCategorySectionHeaderView.swift in Sources */,
 				81A6270D22B7A7A400CB8899 /* SettingsCommandHandlerProtocol.swift in Sources */,
@@ -874,6 +980,8 @@
 				81A6271822B7C13F00CB8899 /* ChangePassViewController.swift in Sources */,
 				81A6278A22B7D03B00CB8899 /* SettingsSimpleTableViewCell.swift in Sources */,
 				81A6274822B7C51700CB8899 /* SiteDataTableViewCell.swift in Sources */,
+				81FFB4F422BE792E00240581 /* InfoViewModelProtocol.swift in Sources */,
+				81FFB4FA22BE95F000240581 /* ChangePassCommandHandlerProtocol.swift in Sources */,
 				81A626EF22B78E8F00CB8899 /* SitesCommandHandler.swift in Sources */,
 				81A6273422B7C3F000CB8899 /* SiteTableViewCell.swift in Sources */,
 				81A6273E22B7C46C00CB8899 /* SiteActionTableViewCell.swift in Sources */,
@@ -1015,6 +1123,7 @@
 			baseConfigurationReference = B331E967C893D2C73DE3377E /* Pods-Lock Bear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Z9V2D5TD7T;
 				INFOPLIST_FILE = "Lock Bear/Info.plist";

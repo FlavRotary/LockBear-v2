@@ -8,7 +8,9 @@
 
 import UIKit
 
-class SettingsViewController: BaseViewController {
+class SettingsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, SettingsSwitchCellDelegate {
+    
+    @IBOutlet weak var tView: UITableView!
     
     weak var commandHandler: SettingsCommandHandlerProtocol?
     
@@ -27,7 +29,84 @@ class SettingsViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
         
+        tView.register(SettingsSimpleTableViewCell.nib, forCellReuseIdentifier: SettingsSimpleTableViewCell.cellReuseIdentifier)
+        tView.register(SettingsSwitchTableViewCell.nib, forCellReuseIdentifier: SettingsSwitchTableViewCell.cellReuseIdentifier)
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        commandHandler?.viewModel?.reloadIfNeeded()
+    }
+    
+    //MARK: - UITableViewDataSource & Delegate
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return commandHandler?.viewModel?.settingTypes.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let settingType = commandHandler?.viewModel?.settingTypes[indexPath.row] {
+            
+            switch settingType.editType {
+                case .usingSwitch:
+                    let cell : SettingsSwitchTableViewCell = tableView.dequeueReusableCell(withIdentifier: SettingsSwitchTableViewCell.cellReuseIdentifier)! as! SettingsSwitchTableViewCell
+                    cell.delegate = self
+                    cell.label.text = commandHandler?.viewModel?.getSettingName(for: indexPath.row)
+                    cell.switch.isOn = true
+                    cell.switch.isEnabled = true
+                    switch settingType.settingSwitchStatus {
+                    case .on:
+                        cell.switch.isOn = true
+                        break;
+                    case .off:
+                        cell.switch.isOn = false
+                        break;
+                    default:
+                        cell.switch.isEnabled = false
+                        break;
+                    }
+                    return cell
+                default:
+                    let cell: SettingsSimpleTableViewCell = tableView.dequeueReusableCell(withIdentifier: SettingsSimpleTableViewCell.cellReuseIdentifier)! as! SettingsSimpleTableViewCell
+                    cell.label.text = commandHandler?.viewModel?.getSettingName(for:indexPath.row)
+                    return cell
+            }
+            
+        }
+        
+        return UITableViewCell()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let settingType = commandHandler?.viewModel?.settingTypes[indexPath.row] {
+            if settingType.editType == .normal {
+                commandHandler?.didSelectSettingType(at: indexPath.row)
+            }
+        }
+        
+    }
+    
+    //MARK: - SettingsSwitchCellDelegate
+    
+    func didSwitch(in cell: SettingsSwitchTableViewCell) {
+        
+        if let indexPath = tView.indexPath(for: cell) {
+            self.commandHandler?.didSwitch(at: indexPath.row)
+        }
     }
 
 

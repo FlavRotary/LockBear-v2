@@ -10,4 +10,7 @@ import Foundation
 
 protocol SitesViewModelDelegate {
     
+    func sitesViewModelDidStartUpdating(_ sitesViewModel: SitesViewModelProtocol)
+    func sitesViewModelDidEndUpdating(_ sitesViewModel: SitesViewModelProtocol)
+    
 }

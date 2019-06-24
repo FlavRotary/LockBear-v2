@@ -9,7 +9,25 @@
 import Foundation
 
 class SitesViewModel: SitesViewModelProtocol {
+   
     
     var delegate: SitesViewModelDelegate?
+    var categories: [SiteCategory] = []
+    
+    
+    func addSite(_ site: Site) {
+        
+    }
+    
+    func editSite(_ site: Site) {
+        
+    }
+    
+    func deleteSite(_ site: Site) {
+        
+    }
+    func getSitePass(_ site: Site) {
+        
+    }
     
 }

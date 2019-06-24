@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+protocol SettingsViewModelProtocol: class {
+    
+    var settings: Settings? {get}
+    var settingTypes: [SettingType] {get}
+    
+    func reloadIfNeeded()
+    func getSettingName(for index: Int) -> String
+    func set(settings: Settings)
+    
+}

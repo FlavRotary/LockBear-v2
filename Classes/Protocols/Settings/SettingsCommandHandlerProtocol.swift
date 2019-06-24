@@ -10,4 +10,8 @@ import Foundation
 
 protocol SettingsCommandHandlerProtocol: class {
     
+    var viewModel: SettingsViewModelProtocol? {get}
+    
+    func didSelectSettingType(at index: Int)
+    func didSwitch(at index:Int)
 }

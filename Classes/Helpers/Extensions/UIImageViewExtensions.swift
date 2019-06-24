@@ -1,5 +1,5 @@
 //
-//  UIImageViewExtensions.swift
+//  UIImageExtensions.swift
 //  Lock Bear
 //
 //  Created by Teodor Rotaru on 17/06/2019.

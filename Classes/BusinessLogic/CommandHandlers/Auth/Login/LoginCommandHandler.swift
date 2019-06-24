@@ -8,12 +8,14 @@
 
 import Foundation
 import UIKit
+import LocalAuthentication
 
 class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDelegate {
     
     //MARK: - Vars
     
     weak var mainViewController: UIViewController?
+    weak var delegate: LoginCommandHandlerDelegate?
     private var navigationController: UINavigationController
     private var loginViewController: LoginViewController?
     var viewModel: AuthViewModelProtocol
@@ -39,7 +41,7 @@ class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDe
     //MARK: - Register Navigation
     
     private func checkIfRegisterNeeded() {
-        if viewModel.settings == nil || viewModel.settings?.vaultPassword == nil {
+        if viewModel.settings == nil || viewModel.settings?.getVaultPassword() == nil {
             //show register alert
             
             UIAlertController.showNoticeAlert("Please Register", "The bear welcomes you, brave warrior. There is no password set up yet for your vault, so please set it up.", self.navigationController) {
@@ -75,10 +77,78 @@ class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDe
     
     func tryBiometricLogin() {
         
+        var bioTypeString = "biometric authentication method"
+        switch self.viewModel.getBiometryType() {
+        case .faceID:
+            bioTypeString = "Face ID"
+            break
+        case .touchID:
+            bioTypeString = "Touch ID"
+            break
+        default:
+            break
+        }
+        let reason = "The Bear wants to use your \(bioTypeString) to login."
+        let context = LAContext()
+//        context.maxBiometryFailures = 1
+        context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason ) { success, error in
+            
+            if success {
+                
+                // Move to the main thread because a state update triggers UI changes.
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) { [unowned self] in
+                    self.loginSuccessfull()
+                }
+                
+            } else {
+                print(error?.localizedDescription ?? "Failed to authenticate")
+                
+                // Fall back to a asking for username and password.
+                
+                context.invalidate()
+                
+                let alert = UIAlertController(title: "Failed", message: "\(bioTypeString.capitalizingFirstLetter()) failed.", preferredStyle: .alert)
+                let tryAgain = UIAlertAction(title: "Try again", style: .default, handler: { (action) in
+
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
+                        self.tryBiometricLogin()
+                    }
+
+                })
+                alert.addAction(tryAgain)
+                let cancel = UIAlertAction(title: "Use password", style: .cancel, handler: { (alert) in
+
+                })
+                alert.addAction(cancel)
+                self.mainViewController?.present(alert, animated: true, completion: {
+
+                })
+                
+            }
+        }
+        
     }
     
     func didPressLogin(_ password: String) {
         
+        if self.viewModel.settings?.getVaultPassword() != password.md5() {
+            
+            UIAlertController.showErrorAlert("The password is incorrect. Did you forget it boss?", self.navigationController)
+            
+            return
+            
+        }
+        
+        self.loginSuccessfull()
+        
+    }
+    
+    //MARK: - Successfull login method
+    
+    func loginSuccessfull() {
+        self.mainViewController?.dismiss(animated: true, completion: {
+            self.delegate?.didDismissLogin()
+        })
     }
     
 }
