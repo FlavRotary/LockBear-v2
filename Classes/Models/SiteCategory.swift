@@ -7,15 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 class SiteCategory {
     var id: Int?
     var name: String?
-    var sites: [Site]? // Because of your ultimatum: Your way or the highway >:P
+    var icon: UIImage!
+    var sites: [Site]? = []
     
-    init(_ id: Int, _ name: String,_ sites: [Site]) {
+    init(_ id: Int, _ name: String, _ icon: UIImage, _ sites: [Site]) {
         self.id = id
         self.name = name
+        self.icon = icon
         self.sites = sites
     }
 }
