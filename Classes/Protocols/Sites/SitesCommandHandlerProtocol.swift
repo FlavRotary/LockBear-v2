@@ -10,4 +10,8 @@ import Foundation
 
 protocol SitesCommandHandlerProtocol: class {
     
+    var viewModel: SitesViewModelProtocol? { get }
+    
+    func didSelectSiteAtIndexPath(_ indexPath: IndexPath)
+    func didPressAdd()
 }

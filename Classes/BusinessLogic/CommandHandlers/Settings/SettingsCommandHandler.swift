@@ -11,7 +11,7 @@ import UIKit
 
 class SettingsCommandHandler: SettingsCommandHandlerProtocol {
     
-    var mainViewController: UIViewController
+    weak var mainViewController: UIViewController?
     private var navigationController: UINavigationController
     private var settingsViewController: SettingsViewController?
     var viewModel: SettingsViewModelProtocol?

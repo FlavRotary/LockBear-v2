@@ -22,7 +22,6 @@ class SQLManager {
     
     init(){
         initDB()
-        print(dbPath)
     }
     
     func initDB() {
@@ -137,7 +136,7 @@ class SQLManager {
     
     func createBasicCategories() -> Bool {
         var isDone = false
-        let basicCategories = ["Social", "Divertisment", "Other"]
+        let basicCategories = ["Social", "Entertainment", "Other"]
         for (index, categoryName) in basicCategories.enumerated(){
             
             let iconName = categoryName.lowercased() + "_icon"
