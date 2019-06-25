@@ -22,13 +22,28 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
         sitesCommandHandler = SitesCommandHandler()
         settingsCommandHandler = SettingsCommandHandler()
         let mainViewController = UITabBarController()
-        mainViewController.viewControllers = [sitesCommandHandler.mainViewController, settingsCommandHandler.mainViewController]
         
-        let sitesItem = mainViewController.tabBar.items?[0]
-        sitesItem?.image = UIImage(named: "sites-tabbatItem")
+        var tabbarControllers: [UIViewController] = []
+        if let sitesMainViewController = sitesCommandHandler.mainViewController {
+            tabbarControllers.append(sitesMainViewController)
+            
+            let sitesItem = mainViewController.tabBar.items?[0]
+            sitesItem?.image = UIImage(named: "sites-tabbatItem")
+            
+        }
+        if let settingsMainViewController = settingsCommandHandler.mainViewController {
+            tabbarControllers.append(settingsMainViewController)
+            
+            let index = tabbarControllers.firstIndex(where: {$0 == settingsMainViewController})
+            
+            if index != nil {
+                let settingsItem = mainViewController.tabBar.items?[index!]
+                settingsItem?.image = UIImage(named: "settings-tabbatItem")
+            }
+            
+        }
         
-        let settingsItem = mainViewController.tabBar.items?[1]
-        settingsItem?.image = UIImage(named: "settings-tabbatItem")
+        mainViewController.viewControllers = tabbarControllers
         
         self.mainViewController = mainViewController
         

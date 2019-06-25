@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SitesViewModelProtocol {
     
     var delegate: SitesViewModelDelegate? { get set }
     var categories: [SiteCategory] {get}
+    var catBackgrounds: [UIImage] {get}
     
     func addSite(_ site: Site)
     func editSite(_ site: Site)

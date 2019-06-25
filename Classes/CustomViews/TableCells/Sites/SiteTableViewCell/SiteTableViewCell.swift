@@ -9,10 +9,22 @@
 import UIKit
 
 class SiteTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var siteIcon: UIImageView!
+    @IBOutlet weak var siteName: UILabel!
+    @IBOutlet weak var siteURL: UILabel!
+    @IBOutlet weak var siteButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+    }
+    
+    func configure(for site: Site, _ buttonImage: UIImage){
+        self.siteIcon.image = site.icon
+        self.siteName.text = site.name
+        self.siteURL.text = site.url
+        self.siteButton.imageView?.image = buttonImage
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
