@@ -11,26 +11,17 @@ import UIKit
 class SiteCategorySectionHeaderView: UIView {
     
     
-    @IBOutlet weak var categoryName: UILabel!
-    @IBOutlet weak var categorySiteCount: UILabel!
-    @IBOutlet weak var categoryIcon: UIImageView!
-    @IBOutlet weak var backgroudImage: UIImageView!
-    
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    @IBOutlet weak var categoryNameLabel: UILabel!
+    @IBOutlet weak var categorySiteCountLabel: UILabel!
+    @IBOutlet weak var categoryIconView: UIImageView!
+    @IBOutlet weak var backgroudImageView: UIImageView!
     
     func configure(with category: SiteCategory, _ bkgImage: UIImage?) {
         
-        self.categoryName.text = category.name
-        self.categoryIcon.image = category.icon
-        self.categorySiteCount.text = "\(category.sites?.count ?? 0) sites"
-        self.backgroudImage.image = bkgImage
+        self.categoryNameLabel.text = category.name
+        self.categoryIconView.image = category.icon
+        self.categorySiteCountLabel.text = "\(category.sites.count) sites"
+        self.backgroudImageView.image = bkgImage
     }
     
     required init?(coder aDecoder: NSCoder) {

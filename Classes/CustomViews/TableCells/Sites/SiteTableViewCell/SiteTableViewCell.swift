@@ -10,21 +10,19 @@ import UIKit
 
 class SiteTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var siteIcon: UIImageView!
-    @IBOutlet weak var siteName: UILabel!
-    @IBOutlet weak var siteURL: UILabel!
-    @IBOutlet weak var siteButton: UIButton!
+    @IBOutlet weak var siteIconImageView: UIImageView!
+    @IBOutlet weak var siteNameLabel: UILabel!
+    @IBOutlet weak var siteDescLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    func configure(for site: Site, _ buttonImage: UIImage){
-        self.siteIcon.image = site.icon
-        self.siteName.text = site.name
-        self.siteURL.text = site.url
-        self.siteButton.imageView?.image = buttonImage
+    func configure(for site: Site) {
+        self.siteIconImageView.image = site.icon
+        self.siteNameLabel.text = site.name
+        self.siteDescLabel.text = site.url
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

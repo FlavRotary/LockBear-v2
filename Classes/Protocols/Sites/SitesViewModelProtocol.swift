@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-protocol SitesViewModelProtocol {
+protocol SitesViewModelProtocol: class {
     
-    var delegate: SitesViewModelDelegate? { get set }
+    var delegate: SitesViewModelDelegate? { get set}
     var categories: [SiteCategory] {get}
-    var catBackgrounds: [UIImage] {get}
+    var selectedSite: Site? {get}
     
-    func addSite(_ site: Site)
-    func editSite(_ site: Site)
+    func selectNewSite()
+    func selectForEditing(_ site: Site)
+    func saveSelectedSite(with completion: @escaping((Error?) -> Void))
     func deleteSite(_ site: Site)
-    func getSitePass(_ site: Site)
 }

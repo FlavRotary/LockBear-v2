@@ -13,7 +13,7 @@ class SiteCategory {
     var id: Int?
     var name: String?
     var icon: UIImage!
-    var sites: [Site]? = []
+    var sites: [Site] = []
     
     init(_ id: Int, _ name: String, _ icon: UIImage, _ sites: [Site]) {
         self.id = id

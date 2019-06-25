@@ -26,13 +26,20 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
         var tabbarControllers: [UIViewController] = []
         if let sitesMainViewController = sitesCommandHandler.mainViewController {
             tabbarControllers.append(sitesMainViewController)
+        }
+        if let settingsMainViewController = settingsCommandHandler.mainViewController {
+            tabbarControllers.append(settingsMainViewController)
+        }
+        
+        mainViewController.viewControllers = tabbarControllers
+        
+        if let _ = sitesCommandHandler.mainViewController {
             
             let sitesItem = mainViewController.tabBar.items?[0]
             sitesItem?.image = UIImage(named: "sites-tabbatItem")
             
         }
         if let settingsMainViewController = settingsCommandHandler.mainViewController {
-            tabbarControllers.append(settingsMainViewController)
             
             let index = tabbarControllers.firstIndex(where: {$0 == settingsMainViewController})
             
@@ -43,15 +50,13 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
             
         }
         
-        mainViewController.viewControllers = tabbarControllers
-        
         self.mainViewController = mainViewController
         
         setGlobalAppearance()
         registerForAppNotifications()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
-            self.showLogin(false)
+//            self.showLogin(false)
         }
     }
     

@@ -14,21 +14,16 @@ class SitesCommandHandler: SitesCommandHandlerProtocol {
     weak var mainViewController: UIViewController?
     private var navigationController: UINavigationController
     private var sitesViewController: SitesViewController?
-    var viewModel: SitesViewModelProtocol?
-    
+    var viewModel: SitesViewModelProtocol
     
     required init() {
     
+        viewModel = SitesViewModel()
+        
         sitesViewController = SitesViewController(with: nil)
         navigationController = UINavigationController(rootViewController: sitesViewController!)
         mainViewController = navigationController
         sitesViewController?.commandHandler = self
-        if let viewModel = viewModel{
-            self.viewModel = viewModel
-        } else {
-            self.viewModel = SitesViewModel()
-        }
-        self.viewModel?.delegate = self.sitesViewController
     }
     
     //MARK: - SitesCommandHandlerProtocol delegates
@@ -38,7 +33,14 @@ class SitesCommandHandler: SitesCommandHandlerProtocol {
     }
     
     func didPressAdd() {
-        //
+        
+        let updateCommandHandler = UpdateSiteCommandHandler()
+        updateCommandHandler.viewModel = viewModel
+        updateCommandHandler.viewModel?.selectNewSite()
+        if let updateMainViewController = updateCommandHandler.mainViewController {
+            self.navigationController.pushViewController(updateMainViewController, animated: true)
+        }
+        
     }
     
 }

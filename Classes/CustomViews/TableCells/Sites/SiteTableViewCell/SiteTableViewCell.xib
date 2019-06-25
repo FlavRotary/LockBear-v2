@@ -38,11 +38,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVG-nT-pHb">
-                        <rect key="frame" x="258" y="7" width="46" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="CZU-RL-hQT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9Cc-Ux-rFn"/>
@@ -55,10 +50,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="siteButton" destination="rVG-nT-pHb" id="8iR-jL-pfV"/>
-                <outlet property="siteIcon" destination="CZU-RL-hQT" id="YPP-0g-Y6I"/>
-                <outlet property="siteName" destination="BlK-xO-dQK" id="pDO-2s-cX4"/>
-                <outlet property="siteURL" destination="861-cN-BUO" id="EY4-bS-nxg"/>
+                <outlet property="siteDescLabel" destination="861-cN-BUO" id="EY4-bS-nxg"/>
+                <outlet property="siteIconImageView" destination="CZU-RL-hQT" id="YPP-0g-Y6I"/>
+                <outlet property="siteNameLabel" destination="BlK-xO-dQK" id="pDO-2s-cX4"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="133.92857142857142"/>
         </tableViewCell>
