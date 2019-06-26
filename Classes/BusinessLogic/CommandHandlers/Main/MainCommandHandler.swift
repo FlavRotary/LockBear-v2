@@ -15,6 +15,7 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
     private var sitesCommandHandler: SitesCommandHandler
     private var settingsCommandHandler: SettingsCommandHandler
     private var loginCommandHandler: LoginCommandHandler?
+    private var loginWindow: UIWindow?
     
     required init() {
         
@@ -56,7 +57,7 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
         registerForAppNotifications()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
-//            self.showLogin(false)
+            self.showLogin(false)
         }
     }
     
@@ -92,17 +93,24 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
         loginCommandHandler = LoginCommandHandler()
         loginCommandHandler?.delegate = self
         if let loginCommandHandler = loginCommandHandler, let loginMainViewController = loginCommandHandler.mainViewController {
-            mainViewController.present(loginMainViewController, animated: animated, completion: nil)
+            loginWindow = UIWindow(frame: UIScreen.main.bounds)
+            loginWindow?.rootViewController = UIViewController()
+            let topWindow = UIApplication.shared.windows.last
+            loginWindow?.windowLevel = UIWindow.Level(rawValue: UIWindow.Level.RawValue(topWindow?.windowLevel.rawValue ?? 0 + 100))
+            loginWindow?.makeKeyAndVisible()
+            loginWindow?.rootViewController?.present(loginMainViewController, animated: animated, completion: nil)
         }
         
         
     }
     
-    //MARK: - LoginCommandHandlerDelegate
+    //MARK: - LoginCommandHandlerDelegate0
     
     func didDismissLogin() {
         loginCommandHandler?.delegate = nil
         loginCommandHandler = nil
+        loginWindow?.isHidden = true
+        loginWindow = nil
     }
     
 }

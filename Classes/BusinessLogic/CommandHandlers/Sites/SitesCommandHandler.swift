@@ -37,6 +37,7 @@ class SitesCommandHandler: SitesCommandHandlerProtocol {
         let updateCommandHandler = UpdateSiteCommandHandler()
         updateCommandHandler.viewModel = viewModel
         updateCommandHandler.viewModel?.selectNewSite()
+        updateCommandHandler.navigationController = navigationController
         if let updateMainViewController = updateCommandHandler.mainViewController {
             self.navigationController.pushViewController(updateMainViewController, animated: true)
         }

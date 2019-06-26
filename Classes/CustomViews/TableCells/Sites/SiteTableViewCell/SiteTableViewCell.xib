@@ -20,32 +20,45 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CZU-RL-hQT">
-                        <rect key="frame" x="20" y="4.5" width="35" height="35"/>
+                        <rect key="frame" x="24" y="4.5" width="38" height="34.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="35" id="NRI-b0-vnA"/>
-                            <constraint firstAttribute="width" constant="35" id="V3Z-jJ-9Lw"/>
+                            <constraint firstAttribute="width" constant="38" id="V3Z-jJ-9Lw"/>
+                            <constraint firstAttribute="width" secondItem="CZU-RL-hQT" secondAttribute="height" multiplier="38:35" constant="1" id="ZZD-G9-dAB"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlK-xO-dQK">
-                        <rect key="frame" x="80" y="5" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="79" y="5" width="187" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="svl-n2-GkL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="861-cN-BUO">
-                        <rect key="frame" x="80" y="21.5" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="79" y="26" width="187" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sites_cell_accesory" translatesAutoresizingMaskIntoConstraints="NO" id="pFF-Wg-5Hf">
+                        <rect key="frame" x="276" y="19.5" width="24" height="5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="aGq-TA-Jqw"/>
+                            <constraint firstAttribute="width" constant="24" id="qUR-fF-IzG"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="CZU-RL-hQT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9Cc-Ux-rFn"/>
-                    <constraint firstItem="BlK-xO-dQK" firstAttribute="leading" secondItem="CZU-RL-hQT" secondAttribute="trailing" constant="25" id="PCG-VL-hmk"/>
-                    <constraint firstItem="861-cN-BUO" firstAttribute="leading" secondItem="CZU-RL-hQT" secondAttribute="trailing" constant="25" id="Toi-xC-LPg"/>
+                    <constraint firstItem="861-cN-BUO" firstAttribute="leading" secondItem="BlK-xO-dQK" secondAttribute="leading" id="52v-ii-JU1"/>
+                    <constraint firstItem="CZU-RL-hQT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="9Cc-Ux-rFn"/>
+                    <constraint firstAttribute="trailing" secondItem="pFF-Wg-5Hf" secondAttribute="trailing" constant="20" id="A5P-Cl-mdF"/>
+                    <constraint firstItem="861-cN-BUO" firstAttribute="top" secondItem="BlK-xO-dQK" secondAttribute="bottom" constant="2" id="CW8-xc-G8l"/>
+                    <constraint firstItem="861-cN-BUO" firstAttribute="trailing" secondItem="BlK-xO-dQK" secondAttribute="trailing" id="G7y-vb-Ttk"/>
+                    <constraint firstItem="BlK-xO-dQK" firstAttribute="leading" secondItem="CZU-RL-hQT" secondAttribute="trailing" constant="17" id="PCG-VL-hmk"/>
+                    <constraint firstItem="pFF-Wg-5Hf" firstAttribute="leading" secondItem="BlK-xO-dQK" secondAttribute="trailing" constant="10" id="ew5-A4-WcV"/>
                     <constraint firstItem="CZU-RL-hQT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kTf-Oi-Ewa"/>
-                    <constraint firstAttribute="bottom" secondItem="861-cN-BUO" secondAttribute="bottom" constant="1" id="mil-jh-Ck9"/>
                     <constraint firstItem="BlK-xO-dQK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="qdD-e2-lf4"/>
+                    <constraint firstItem="pFF-Wg-5Hf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="roI-ql-hdO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -57,4 +70,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="133.92857142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="sites_cell_accesory" width="24" height="5"/>
+    </resources>
 </document>
