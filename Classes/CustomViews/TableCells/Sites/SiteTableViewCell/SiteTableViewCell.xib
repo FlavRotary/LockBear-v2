@@ -27,15 +27,15 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlK-xO-dQK">
-                        <rect key="frame" x="79" y="5" width="187" height="19"/>
+                        <rect key="frame" x="79" y="5" width="187" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="19" id="svl-n2-GkL"/>
+                            <constraint firstAttribute="height" constant="17" id="svl-n2-GkL"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="861-cN-BUO">
-                        <rect key="frame" x="79" y="26" width="187" height="17"/>
+                        <rect key="frame" x="79" y="24" width="187" height="17"/>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>

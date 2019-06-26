@@ -32,9 +32,9 @@ class UpdateSiteCommandHandler: UpdateSiteCommandHandlerProtocol {
             selectedSite.url = updateViewController.siteUrlTextField.text
             selectedSite.username = updateViewController.SiteUsernameTextField.text
             selectedSite.password = updateViewController.sitePasswordTextField.text
-            if let image = updateViewController.iconImgView.image {
-                selectedSite.icon = image
-            }
+//            if let image = updateViewController.iconImgView.image {
+//                selectedSite.icon = image
+//            }
             
             viewModel.saveSelectedSite { (error) in
                 

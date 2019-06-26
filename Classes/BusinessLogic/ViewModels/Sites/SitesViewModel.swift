@@ -78,10 +78,10 @@ class SitesViewModel: SitesViewModelProtocol {
                 var success = false
                 if selectedSite.id == nil {
                     success = self.sqlManager?.insertIn(sitesTable, selectedSite) ?? false
-                    self.updateData()
                 } else {
                     success = self.sqlManager?.updateIn(sitesTable, selectedSite) ?? false
                 }
+                self.updateData()
                 completion(success == false ? error : nil)
             }
             

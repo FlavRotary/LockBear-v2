@@ -47,6 +47,12 @@ class UpdateSiteViewController: BaseViewController, UITextFieldDelegate, UIPicke
         picker = UIPickerView()
         picker?.delegate = self
         siteCategoryTextField.inputView = picker
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        scrollVIew.contentSize = contentView.bounds.size
         
         if let selectedSite = commandHandler?.viewModel?.selectedSite {
             siteNameTextField.text = selectedSite.name
@@ -55,13 +61,14 @@ class UpdateSiteViewController: BaseViewController, UITextFieldDelegate, UIPicke
             sitePasswordTextField.text = selectedSite.password
             siteCategoryTextField.text = selectedSite.siteCategory?.name
             selectedCategory = selectedSite.siteCategory
+            let size = CGSize(width: self.iconImgView.bounds.width * UIScreen.main.scale, height: self.iconImgView.bounds.height * UIScreen.main.scale)
+            DispatchQueue.global().async {
+                let resizedImage = selectedSite.icon.resize(width: size.width, height: size.height)
+                DispatchQueue.main.async {
+                    self.iconImgView.image = resizedImage
+                }
+            }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        scrollVIew.contentSize = contentView.bounds.size
         
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { (notification) in
             

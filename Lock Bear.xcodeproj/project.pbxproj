@@ -27,6 +27,7 @@
 		813FAEE222C2F5B50044CBB8 /* SiteActionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEE122C2F5B50044CBB8 /* SiteActionsViewModel.swift */; };
 		813FAEE422C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEE322C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift */; };
 		813FAEE622C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEE522C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift */; };
+		81A0774F22C31D49000E7432 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0774E22C31D49000E7432 /* UIImageExtensions.swift */; };
 		81A626B922B78B8400CB8899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A626B722B78B8400CB8899 /* LaunchScreen.storyboard */; };
 		81A626E222B78BC700CB8899 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A626C522B78BC700CB8899 /* LoginViewController.xib */; };
 		81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A626C622B78BC700CB8899 /* LoginViewController.swift */; };
@@ -76,7 +77,6 @@
 		81A6276B22B7CD9600CB8899 /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6276A22B7CD9600CB8899 /* SqliteManager.swift */; };
 		81A6276D22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6276C22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift */; };
 		81A6276F22B7CDBD00CB8899 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6276E22B7CDBD00CB8899 /* KeychainManager.swift */; };
-		81A6277122B7CDCF00CB8899 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6277022B7CDCF00CB8899 /* UIImageViewExtensions.swift */; };
 		81A6277322B7CE2100CB8899 /* SqliteTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6277222B7CE2100CB8899 /* SqliteTables.swift */; };
 		81A6277522B7CE9200CB8899 /* AESCrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6277422B7CE9200CB8899 /* AESCrypter.swift */; };
 		81A6277722B7CEA500CB8899 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6277622B7CEA500CB8899 /* StringExtensions.swift */; };
@@ -125,6 +125,7 @@
 		813FAEE122C2F5B50044CBB8 /* SiteActionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsViewModel.swift; sourceTree = "<group>"; };
 		813FAEE322C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsCommandHandlerProtocol.swift; sourceTree = "<group>"; };
 		813FAEE522C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsCommandHandler.swift; sourceTree = "<group>"; };
+		81A0774E22C31D49000E7432 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		81A626AB22B78B8300CB8899 /* Lock Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A626B822B78B8400CB8899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A626BA22B78B8400CB8899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,7 +178,6 @@
 		81A6276A22B7CD9600CB8899 /* SqliteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
 		81A6276C22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertViewControllerExtensions.swift; sourceTree = "<group>"; };
 		81A6276E22B7CDBD00CB8899 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
-		81A6277022B7CDCF00CB8899 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		81A6277222B7CE2100CB8899 /* SqliteTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteTables.swift; sourceTree = "<group>"; };
 		81A6277422B7CE9200CB8899 /* AESCrypter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCrypter.swift; sourceTree = "<group>"; };
 		81A6277622B7CEA500CB8899 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -452,8 +452,8 @@
 		81A626DF22B78BC700CB8899 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				81A0774E22C31D49000E7432 /* UIImageExtensions.swift */,
 				81A6276C22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift */,
-				81A6277022B7CDCF00CB8899 /* UIImageViewExtensions.swift */,
 				81A6277622B7CEA500CB8899 /* StringExtensions.swift */,
 				8127E7DE22BE43EA00B58A3C /* UITableVIewCellExtension.swift */,
 				813FAED622C29C1A0044CBB8 /* ActivityDataExtension.swift */,
@@ -934,7 +934,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A6277122B7CDCF00CB8899 /* UIImageViewExtensions.swift in Sources */,
 				813FAEE022C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift in Sources */,
 				81A6275E22B7C95D00CB8899 /* ChangePassCommandHandler.swift in Sources */,
 				813FAEDE22C2F3D80044CBB8 /* SiteActions.swift in Sources */,
@@ -1002,6 +1001,7 @@
 				81A626EF22B78E8F00CB8899 /* SitesCommandHandler.swift in Sources */,
 				81A6273422B7C3F000CB8899 /* SiteTableViewCell.swift in Sources */,
 				81A6273E22B7C46C00CB8899 /* SiteActionTableViewCell.swift in Sources */,
+				81A0774F22C31D49000E7432 /* UIImageExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

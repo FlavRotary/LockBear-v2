@@ -41,6 +41,18 @@ class SiteActionsViewController: BaseViewController, UITableViewDelegate, UITabl
         self.view.isOpaque = false
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let size = CGSize(width: self.headerImgView.bounds.width * UIScreen.main.scale, height: self.headerImgView.bounds.height * UIScreen.main.scale)
+        DispatchQueue.global().async {
+            let resizedImage = self.commandHandler?.viewModel.selectedSite?.icon.resize(width: size.width, height: size.height)
+            DispatchQueue.main.async {
+                self.headerImgView.image = resizedImage
+            }
+        }
+    }
+    
     //MARK: - UITableView Delegates
     
     func numberOfSections(in tableView: UITableView) -> Int {
