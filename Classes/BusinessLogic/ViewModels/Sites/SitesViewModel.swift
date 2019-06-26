@@ -14,8 +14,8 @@ class SitesViewModel: SitesViewModelProtocol {
     
     var delegate: SitesViewModelDelegate?
     var categories: [SiteCategory] = []
-    var catBackgrounds: [UIImage] = [UIImage()]
     var sqlManager: SQLManager?
+    var selectedSite: Site?
     
     required init() {
         if sqlManager == nil {
@@ -45,19 +45,49 @@ class SitesViewModel: SitesViewModelProtocol {
         }
     }
     
-    func addSite(_ site: Site) {
+    func selectNewSite() {
+        selectedSite = Site()
+    }
+    func selectForEditing(_ site: Site) {
+        selectedSite = site
+    }
+    func deleteSite(_ site: Site, _ completion: @escaping ((Error?) -> Void)) {
         
+        let error = NSError(domain: "com.lockbear", code: 0, userInfo: [NSLocalizedDescriptionKey:"Site not found."])
+        
+        if let sitesTable = sqlManager?.sitesTable {
+            
+            DispatchQueue.global().async {
+                let success = self.sqlManager?.deleteIn(sitesTable, site)
+                self.updateData()
+                completion(success == false ? error : nil)
+            }
+            
+        } else {
+            completion(error)
+        }
     }
     
-    func editSite(_ site: Site) {
+    func saveSelectedSite(with completion: @escaping ((Error?) -> Void)) {
         
-    }
-    
-    func deleteSite(_ site: Site) {
+        let error = NSError(domain: "com.lockbear", code: 0, userInfo: [NSLocalizedDescriptionKey:"Site not found."])
         
-    }
-    func getSitePass(_ site: Site) {
-        
+        if let selectedSite = self.selectedSite, let sitesTable = sqlManager?.sitesTable {
+            
+            DispatchQueue.global().async {
+                var success = false
+                if selectedSite.id == nil {
+                    success = self.sqlManager?.insertIn(sitesTable, selectedSite) ?? false
+                } else {
+                    success = self.sqlManager?.updateIn(sitesTable, selectedSite) ?? false
+                }
+                self.updateData()
+                completion(success == false ? error : nil)
+            }
+            
+        } else {
+            completion(error)
+        }
     }
     
 }

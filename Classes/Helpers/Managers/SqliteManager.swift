@@ -2,7 +2,7 @@
 //  SqliteManager.swift
 //  Lock Bear
 //
-//  Created by Teodor Rotaru on 17/06/2019.
+//  Created by Flavian Rotaru on 17/04/2019.
 //  Copyright © 2019 Flavian Rotaru. All rights reserved.
 //
 
@@ -114,23 +114,49 @@ class SQLManager {
     
     func fetchData() -> [SiteCategory] {
         var gotCategories : Array <SiteCategory> = []
-        let categoryid  = Expression<Int64>("categoryid")
-        let sitecategoryid  = Expression<Int64>("sitecategoryid")
-        let t1 = self.sitesTable.table
-        let t2 = self.categoriesTable.table
+//        let categoryid  = Expression<Int64>("categoryid")
+//        let sitecategoryid  = Expression<Int64>("sitecategoryid")
+//        let t1 = self.sitesTable.table
+//        let t2 = self.categoriesTable.table
         do{
             for category in try self.getDb().prepare(self.categoriesTable.table){
                 let newCategory = SiteCategory(Int(category[self.categoriesTable.sitecategoryid]), category[self.categoriesTable.name], UIImage(data: Data.fromDatatypeValue(category[self.categoriesTable.icon]))! ,[])
-                let gotSites = t1.join(t2, on: t1[categoryid] == t2[sitecategoryid])
-                for row in try self.getDb().prepare(gotSites) {
-                    let site = Site(Int(row[self.sitesTable.siteid]), Int(row[self.sitesTable.categoryid]), row[self.sitesTable.url], row[self.sitesTable.name], row[self.sitesTable.username], UIImage(data: Data.fromDatatypeValue(row[self.sitesTable.icon]))!)
-                    newCategory.sites?.append(site)
-                }
+//                let gotSites = t1.join(t2, on: t1[categoryid] == t2[sitecategoryid])
+//                for row in try self.getDb().prepare(gotSites) {
+//                    let site = Site(Int(row[self.sitesTable.siteid]), Int(row[self.sitesTable.categoryid]), row[self.sitesTable.url], row[self.sitesTable.name], row[self.sitesTable.username])
+//                    newCategory.sites.append(site)
+//                }
                 gotCategories.append(newCategory)
             }
         } catch {
             print("Select from Categories failed: \(error)")
         }
+        
+        do {
+            for site in try self.getDb().prepare(self.sitesTable.table) {
+                let newSite = Site()
+                newSite.id = Int(site[self.sitesTable.siteid])
+                newSite.name = site[self.sitesTable.name]
+                newSite.url = site[self.sitesTable.url]
+                newSite.username = site[self.sitesTable.username]
+                newSite.categoryid = Int(site[self.sitesTable.categoryid])
+                
+                let gotPass = Data.fromDatatypeValue(site[self.sitesTable.password])
+                let gotIv = Data.fromDatatypeValue(site[self.sitesTable.iv])
+                
+                newSite.password = KeychainAndEncryption.decryptforAES(gotPass, gotIv) ?? ""
+                
+                let filter = gotCategories.filter { $0.id == newSite.categoryid }
+                if filter.count > 0 {
+                    newSite.siteCategory = filter.first
+                }
+                
+                newSite.siteCategory?.sites.append(newSite)
+            }
+        } catch {
+            print("Select from Sites failed: \(error)")
+        }
+        
         return gotCategories
     }
     

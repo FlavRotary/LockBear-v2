@@ -2,7 +2,7 @@
 //  SitesTables.swift
 //  Lock Bear
 //
-//  Created by Teodor Rotaru on 17/06/2019.
+//  Created by Flavian Rotaru on 17/04/2019.
 //  Copyright © 2019 Flavian Rotaru. All rights reserved.
 //
 
@@ -28,7 +28,6 @@ struct SitesTable{
     var username = Expression<String>("username")
     var password = Expression<Blob>("password")
     var iv = Expression<Blob>("iv")
-    var icon = Expression<Blob>("icon")
 }
 
 extension SitesTable: SQLTable{
@@ -42,45 +41,37 @@ extension SitesTable: SQLTable{
             t.column(username)
             t.column(password)
             t.column(iv)
-            t.column(icon)
         })
         return statement
     }
     
     func insert(_ item: Site) -> Insert {
         let gotSite = item
-        gotSite.nilCheck()
-        let (resultedPass, resultediv) = KeychainAndEncryption.ecryptWithAES(gotSite.password)
-        item.state = .isHidden
-        gotSite.state = .isHidden
+        let (resultedPass, resultediv) = KeychainAndEncryption.ecryptWithAES(gotSite.password ?? "")
         let statement = table.insert(or: .replace,
-                                     self.categoryid <- Int64(gotSite.categoryid),
-                                     self.name <- gotSite.name,
-                                     self.url <- gotSite.url,
-                                     self.username <- gotSite.username,
+                                     self.categoryid <- Int64(gotSite.categoryid ?? 0),
+                                     self.name <- gotSite.name ?? "",
+                                     self.url <- gotSite.url ?? "",
+                                     self.username <- gotSite.username ?? "",
                                      self.password <- Blob(bytes: [UInt8](resultedPass!)),
-                                     self.iv <- Blob(bytes: [UInt8](resultediv!)),
-                                     self.iv <- Blob(bytes: [UInt8](gotSite.icon.pngData()!)))
+                                     self.iv <- Blob(bytes: [UInt8](resultediv!)))
         return statement
     }
     
     func update(for site: Site) -> Update{
         
         let gotSite = site
-        gotSite.nilCheck()
-        let (resultedPass, resultediv) = KeychainAndEncryption.ecryptWithAES(gotSite.password)
-        gotSite.state = .isHidden
-        site.state = .isHidden
+        //gotSite.nilCheck()
+        let (resultedPass, resultediv) = KeychainAndEncryption.ecryptWithAES(gotSite.password!)
         let gotRow = table.filter(siteid == Int64(gotSite.id!))
         
         let statement = gotRow.update(
-            [self.categoryid <- Int64(site.categoryid),
-             self.name <- site.name,
-             self.url <- site.url,
-             self.username <- site.username,
+            [self.categoryid <- Int64(site.categoryid ?? 0),
+             self.name <- site.name ?? "",
+             self.url <- site.url ?? "",
+             self.username <- site.username ?? "",
              self.password <- Blob(bytes: [UInt8](resultedPass!)),
-             self.iv <- Blob(bytes: [UInt8](resultediv!)),
-             self.icon <- Blob(bytes: [UInt8](site.icon.pngData()!))])
+             self.iv <- Blob(bytes: [UInt8](resultediv!))])
         return statement
     }
     

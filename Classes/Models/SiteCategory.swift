@@ -2,7 +2,7 @@
 //  SiteCategory.swift
 //  Lock Bear
 //
-//  Created by Teodor Rotaru on 17/06/2019.
+//  Created by Flavian Rotaru on 17/04/2019.
 //  Copyright © 2019 Flavian Rotaru. All rights reserved.
 //
 
@@ -13,7 +13,7 @@ class SiteCategory {
     var id: Int?
     var name: String?
     var icon: UIImage!
-    var sites: [Site]? = []
+    var sites: [Site] = []
     
     init(_ id: Int, _ name: String, _ icon: UIImage, _ sites: [Site]) {
         self.id = id

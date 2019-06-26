@@ -2,7 +2,7 @@
 //  LoginCommandHandler.swift
 //  Lock Bear
 //
-//  Created by Teodor Rotaru on 17/06/2019.
+//  Created by Flavian Rotaru on 17/04/2019.
 //  Copyright © 2019 Flavian Rotaru. All rights reserved.
 //
 
@@ -20,6 +20,9 @@ class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDe
     private var loginViewController: LoginViewController?
     var viewModel: AuthViewModelProtocol
     private var registerCommandHandler: RegisterCommandHandler?
+    var usingBiometricLogin: Bool = false
+    var biometricLoggedIn: Bool = false
+    
     
     //MARK: - Initializer
     
@@ -77,6 +80,12 @@ class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDe
     
     func tryBiometricLogin() {
         
+        if usingBiometricLogin || biometricLoggedIn {
+            return
+        }
+        
+        usingBiometricLogin = true
+        
         var bioTypeString = "biometric authentication method"
         switch self.viewModel.getBiometryType() {
         case .faceID:
@@ -90,10 +99,14 @@ class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDe
         }
         let reason = "The Bear wants to use your \(bioTypeString) to login."
         let context = LAContext()
-//        context.maxBiometryFailures = 1
+        context.localizedFallbackTitle = "Use Password"
         context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason ) { success, error in
             
+            self.usingBiometricLogin = false
+            
             if success {
+                
+                self.biometricLoggedIn = true
                 
                 // Move to the main thread because a state update triggers UI changes.
                 DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) { [unowned self] in
@@ -104,8 +117,6 @@ class LoginCommandHandler: LoginCommandHandlerProtocol, RegisterCommnadHandlerDe
                 print(error?.localizedDescription ?? "Failed to authenticate")
                 
                 // Fall back to a asking for username and password.
-                
-                context.invalidate()
                 
                 let alert = UIAlertController(title: "Failed", message: "\(bioTypeString.capitalizingFirstLetter()) failed.", preferredStyle: .alert)
                 let tryAgain = UIAlertAction(title: "Try again", style: .default, handler: { (action) in

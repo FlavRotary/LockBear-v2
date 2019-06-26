@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		051F71C94EB5775EAA367533 /* Pods_Lock_Bear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BA1A8BBC033BD192E04A26 /* Pods_Lock_Bear.framework */; };
 		8127E7D322BBD74D00B58A3C /* AuthViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */; };
 		8127E7D522BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */; };
 		8127E7D722BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7D622BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift */; };
@@ -21,6 +20,14 @@
 		8127E7ED22BE5A4D00B58A3C /* BaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8127E7EB22BE5A4D00B58A3C /* BaseWebViewController.xib */; };
 		8127E7EF22BE5AFB00B58A3C /* ToSViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7EE22BE5AFB00B58A3C /* ToSViewModelProtocol.swift */; };
 		8127E7F122BE5B3E00B58A3C /* ToSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7F022BE5B3E00B58A3C /* ToSViewModel.swift */; };
+		813FAED722C29C1A0044CBB8 /* ActivityDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAED622C29C1A0044CBB8 /* ActivityDataExtension.swift */; };
+		813FAED922C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAED822C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift */; };
+		813FAEDE22C2F3D80044CBB8 /* SiteActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEDD22C2F3D80044CBB8 /* SiteActions.swift */; };
+		813FAEE022C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEDF22C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift */; };
+		813FAEE222C2F5B50044CBB8 /* SiteActionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEE122C2F5B50044CBB8 /* SiteActionsViewModel.swift */; };
+		813FAEE422C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEE322C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift */; };
+		813FAEE622C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEE522C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift */; };
+		81A0774F22C31D49000E7432 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A0774E22C31D49000E7432 /* UIImageExtensions.swift */; };
 		81A626B922B78B8400CB8899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A626B722B78B8400CB8899 /* LaunchScreen.storyboard */; };
 		81A626E222B78BC700CB8899 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A626C522B78BC700CB8899 /* LoginViewController.xib */; };
 		81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A626C622B78BC700CB8899 /* LoginViewController.swift */; };
@@ -48,8 +55,6 @@
 		81A6272422B7C25100CB8899 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6272222B7C25100CB8899 /* RegisterViewController.xib */; };
 		81A6272922B7C2DB00CB8899 /* UpdateSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6272722B7C2DB00CB8899 /* UpdateSiteViewController.swift */; };
 		81A6272A22B7C2DB00CB8899 /* UpdateSiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6272822B7C2DB00CB8899 /* UpdateSiteViewController.xib */; };
-		81A6272E22B7C32100CB8899 /* AddSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6272D22B7C32100CB8899 /* AddSiteViewController.swift */; };
-		81A6273022B7C32D00CB8899 /* EditSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6272F22B7C32D00CB8899 /* EditSiteViewController.swift */; };
 		81A6273422B7C3F000CB8899 /* SiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6273222B7C3F000CB8899 /* SiteTableViewCell.swift */; };
 		81A6273522B7C3F000CB8899 /* SiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6273322B7C3F000CB8899 /* SiteTableViewCell.xib */; };
 		81A6273922B7C42A00CB8899 /* SiteActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6273722B7C42A00CB8899 /* SiteActionsViewController.swift */; };
@@ -72,7 +77,6 @@
 		81A6276B22B7CD9600CB8899 /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6276A22B7CD9600CB8899 /* SqliteManager.swift */; };
 		81A6276D22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6276C22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift */; };
 		81A6276F22B7CDBD00CB8899 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6276E22B7CDBD00CB8899 /* KeychainManager.swift */; };
-		81A6277122B7CDCF00CB8899 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6277022B7CDCF00CB8899 /* UIImageViewExtensions.swift */; };
 		81A6277322B7CE2100CB8899 /* SqliteTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6277222B7CE2100CB8899 /* SqliteTables.swift */; };
 		81A6277522B7CE9200CB8899 /* AESCrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6277422B7CE9200CB8899 /* AESCrypter.swift */; };
 		81A6277722B7CEA500CB8899 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6277622B7CEA500CB8899 /* StringExtensions.swift */; };
@@ -94,10 +98,13 @@
 		81FFB4F622BE798A00240581 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FFB4F522BE798A00240581 /* InfoViewModel.swift */; };
 		81FFB4F822BE7C3A00240581 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81FFB4F722BE7C3A00240581 /* InfoViewController.xib */; };
 		81FFB4FA22BE95F000240581 /* ChangePassCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FFB4F922BE95EF00240581 /* ChangePassCommandHandlerProtocol.swift */; };
+		EAECF708A605B4F3FF31EB6D /* Pods_Lock_Bear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADA975E1D4A9AC8513377F4 /* Pods_Lock_Bear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3874F898F282D8E9CD33BDD3 /* Pods-Lock Bear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.debug.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.debug.xcconfig"; sourceTree = "<group>"; };
+		0952BD4F1ECA98F18C0EE00D /* Pods-Lock Bear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.debug.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.debug.xcconfig"; sourceTree = "<group>"; };
+		3ADA975E1D4A9AC8513377F4 /* Pods_Lock_Bear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lock_Bear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F2371FD328228AA5052EAB /* Pods-Lock Bear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.release.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.release.xcconfig"; sourceTree = "<group>"; };
 		8127E7D222BBD74D00B58A3C /* AuthViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelProtocol.swift; sourceTree = "<group>"; };
 		8127E7D422BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerProtocol.swift; sourceTree = "<group>"; };
 		8127E7D622BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCommandHandlerDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +118,14 @@
 		8127E7EB22BE5A4D00B58A3C /* BaseWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseWebViewController.xib; sourceTree = "<group>"; };
 		8127E7EE22BE5AFB00B58A3C /* ToSViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSViewModelProtocol.swift; sourceTree = "<group>"; };
 		8127E7F022BE5B3E00B58A3C /* ToSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSViewModel.swift; sourceTree = "<group>"; };
+		813FAED622C29C1A0044CBB8 /* ActivityDataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDataExtension.swift; sourceTree = "<group>"; };
+		813FAED822C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSiteCommandHandlerProtocol.swift; sourceTree = "<group>"; };
+		813FAEDD22C2F3D80044CBB8 /* SiteActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActions.swift; sourceTree = "<group>"; };
+		813FAEDF22C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsViewModelProtocol.swift; sourceTree = "<group>"; };
+		813FAEE122C2F5B50044CBB8 /* SiteActionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsViewModel.swift; sourceTree = "<group>"; };
+		813FAEE322C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsCommandHandlerProtocol.swift; sourceTree = "<group>"; };
+		813FAEE522C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsCommandHandler.swift; sourceTree = "<group>"; };
+		81A0774E22C31D49000E7432 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		81A626AB22B78B8300CB8899 /* Lock Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A626B822B78B8400CB8899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A626BA22B78B8400CB8899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,8 +156,6 @@
 		81A6272222B7C25100CB8899 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		81A6272722B7C2DB00CB8899 /* UpdateSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSiteViewController.swift; sourceTree = "<group>"; };
 		81A6272822B7C2DB00CB8899 /* UpdateSiteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateSiteViewController.xib; sourceTree = "<group>"; };
-		81A6272D22B7C32100CB8899 /* AddSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSiteViewController.swift; sourceTree = "<group>"; };
-		81A6272F22B7C32D00CB8899 /* EditSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSiteViewController.swift; sourceTree = "<group>"; };
 		81A6273222B7C3F000CB8899 /* SiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteTableViewCell.swift; sourceTree = "<group>"; };
 		81A6273322B7C3F000CB8899 /* SiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SiteTableViewCell.xib; sourceTree = "<group>"; };
 		81A6273722B7C42A00CB8899 /* SiteActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +178,6 @@
 		81A6276A22B7CD9600CB8899 /* SqliteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
 		81A6276C22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertViewControllerExtensions.swift; sourceTree = "<group>"; };
 		81A6276E22B7CDBD00CB8899 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
-		81A6277022B7CDCF00CB8899 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		81A6277222B7CE2100CB8899 /* SqliteTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteTables.swift; sourceTree = "<group>"; };
 		81A6277422B7CE9200CB8899 /* AESCrypter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCrypter.swift; sourceTree = "<group>"; };
 		81A6277622B7CEA500CB8899 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -186,8 +198,6 @@
 		81FFB4F522BE798A00240581 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		81FFB4F722BE7C3A00240581 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		81FFB4F922BE95EF00240581 /* ChangePassCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassCommandHandlerProtocol.swift; sourceTree = "<group>"; };
-		92BA1A8BBC033BD192E04A26 /* Pods_Lock_Bear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lock_Bear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6B51E559559EC4F1530A41F /* Pods-Lock Bear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lock Bear.release.xcconfig"; path = "Target Support Files/Pods-Lock Bear/Pods-Lock Bear.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81FFB4EC22BE714100240581 /* WebKit.framework in Frameworks */,
-				051F71C94EB5775EAA367533 /* Pods_Lock_Bear.framework in Frameworks */,
+				EAECF708A605B4F3FF31EB6D /* Pods_Lock_Bear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				8127E7E122BE456D00B58A3C /* SettingTypeEnums.swift */,
+				813FAEDD22C2F3D80044CBB8 /* SiteActions.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -219,13 +230,22 @@
 			path = TosViewController;
 			sourceTree = "<group>";
 		};
+		813FAED522C295BD0044CBB8 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				81FFB4EB22BE714100240581 /* WebKit.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		81A626A222B78B8300CB8899 = {
 			isa = PBXGroup;
 			children = (
 				81A626AD22B78B8300CB8899 /* Lock Bear */,
 				81A626AC22B78B8300CB8899 /* Products */,
 				8FCC7F4E4F025D5EF8D7C57F /* Pods */,
-				FC17A93AE72B9468D38DDFD3 /* Frameworks */,
+				813FAED522C295BD0044CBB8 /* Recovered References */,
+				F2D27638830684D0ADCDACED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -303,8 +323,6 @@
 		81A626C722B78BC700CB8899 /* Sites */ = {
 			isa = PBXGroup;
 			children = (
-				81A6272C22B7C2F600CB8899 /* AddSiteViewController */,
-				81A6272B22B7C2E600CB8899 /* EditSiteViewController */,
 				81A6272522B7C26200CB8899 /* UpdateSiteViewController */,
 				81A626C822B78BC700CB8899 /* SitesViewController */,
 				81A6273622B7C40B00CB8899 /* SiteActionsViewController */,
@@ -363,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				81A626D322B78BC700CB8899 /* SitesViewModel.swift */,
+				813FAEE122C2F5B50044CBB8 /* SiteActionsViewModel.swift */,
 			);
 			path = Sites;
 			sourceTree = "<group>";
@@ -383,6 +402,9 @@
 				81A626D622B78BC700CB8899 /* SitesViewModelProtocol.swift */,
 				81A626D722B78BC700CB8899 /* SitesViewModelDelegate.swift */,
 				81A626FA22B797D400CB8899 /* SitesCommandHandlerProtocol.swift */,
+				813FAED822C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift */,
+				813FAEDF22C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift */,
+				813FAEE322C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift */,
 			);
 			path = Sites;
 			sourceTree = "<group>";
@@ -430,10 +452,11 @@
 		81A626DF22B78BC700CB8899 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				81A0774E22C31D49000E7432 /* UIImageExtensions.swift */,
 				81A6276C22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift */,
-				81A6277022B7CDCF00CB8899 /* UIImageViewExtensions.swift */,
 				81A6277622B7CEA500CB8899 /* StringExtensions.swift */,
 				8127E7DE22BE43EA00B58A3C /* UITableVIewCellExtension.swift */,
+				813FAED622C29C1A0044CBB8 /* ActivityDataExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -463,6 +486,7 @@
 			children = (
 				81A626EE22B78E8F00CB8899 /* SitesCommandHandler.swift */,
 				81A6276122B7C98E00CB8899 /* UpdateSiteCommandHandler.swift */,
+				813FAEE522C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift */,
 			);
 			path = Sites;
 			sourceTree = "<group>";
@@ -586,22 +610,6 @@
 				81A6272822B7C2DB00CB8899 /* UpdateSiteViewController.xib */,
 			);
 			path = UpdateSiteViewController;
-			sourceTree = "<group>";
-		};
-		81A6272B22B7C2E600CB8899 /* EditSiteViewController */ = {
-			isa = PBXGroup;
-			children = (
-				81A6272F22B7C32D00CB8899 /* EditSiteViewController.swift */,
-			);
-			path = EditSiteViewController;
-			sourceTree = "<group>";
-		};
-		81A6272C22B7C2F600CB8899 /* AddSiteViewController */ = {
-			isa = PBXGroup;
-			children = (
-				81A6272D22B7C32100CB8899 /* AddSiteViewController.swift */,
-			);
-			path = AddSiteViewController;
 			sourceTree = "<group>";
 		};
 		81A6273122B7C3D400CB8899 /* SiteTableViewCell */ = {
@@ -765,16 +773,16 @@
 		8FCC7F4E4F025D5EF8D7C57F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3874F898F282D8E9CD33BDD3 /* Pods-Lock Bear.debug.xcconfig */,
-				B6B51E559559EC4F1530A41F /* Pods-Lock Bear.release.xcconfig */,
+				0952BD4F1ECA98F18C0EE00D /* Pods-Lock Bear.debug.xcconfig */,
+				80F2371FD328228AA5052EAB /* Pods-Lock Bear.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		FC17A93AE72B9468D38DDFD3 /* Frameworks */ = {
+		F2D27638830684D0ADCDACED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				92BA1A8BBC033BD192E04A26 /* Pods_Lock_Bear.framework */,
+				3ADA975E1D4A9AC8513377F4 /* Pods_Lock_Bear.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -786,11 +794,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81A626BD22B78B8400CB8899 /* Build configuration list for PBXNativeTarget "Lock Bear" */;
 			buildPhases = (
-				8FF8D57703A087291721B2BA /* [CP] Check Pods Manifest.lock */,
+				FDC5921CEE14DB1D4B367843 /* [CP] Check Pods Manifest.lock */,
 				81A626A722B78B8300CB8899 /* Sources */,
 				81A626A822B78B8300CB8899 /* Frameworks */,
 				81A626A922B78B8300CB8899 /* Resources */,
-				4EAAAD9565316EF87B597F8B /* [CP] Embed Pods Frameworks */,
+				291D750DB565B1E4F0A4F553 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -867,24 +875,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4EAAAD9565316EF87B597F8B /* [CP] Embed Pods Frameworks */ = {
+		291D750DB565B1E4F0A4F553 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lock Bear/Pods-Lock Bear-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lock Bear/Pods-Lock Bear-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GBFloatingTextField/GBFloatingTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lock Bear/Pods-Lock Bear-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GBFloatingTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lock Bear/Pods-Lock Bear-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8FF8D57703A087291721B2BA /* [CP] Check Pods Manifest.lock */ = {
+		FDC5921CEE14DB1D4B367843 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -913,8 +934,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A6277122B7CDCF00CB8899 /* UIImageViewExtensions.swift in Sources */,
+				813FAEE022C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift in Sources */,
 				81A6275E22B7C95D00CB8899 /* ChangePassCommandHandler.swift in Sources */,
+				813FAEDE22C2F3D80044CBB8 /* SiteActions.swift in Sources */,
 				8127E7D922BD69BA00B58A3C /* UserDefaultsManager.swift in Sources */,
 				81A626EB22B78BC700CB8899 /* AppDelegate.swift in Sources */,
 				81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */,
@@ -930,11 +952,11 @@
 				81A6279322B7D51F00CB8899 /* LoginCommandHandlerProtocol.swift in Sources */,
 				81A626FB22B797D400CB8899 /* SitesCommandHandlerProtocol.swift in Sources */,
 				8127E7D522BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift in Sources */,
+				813FAEE222C2F5B50044CBB8 /* SiteActionsViewModel.swift in Sources */,
 				81A6278122B7CF4A00CB8899 /* SiteCategory.swift in Sources */,
 				81A6276F22B7CDBD00CB8899 /* KeychainManager.swift in Sources */,
 				81A6277522B7CE9200CB8899 /* AESCrypter.swift in Sources */,
 				81A626E822B78BC700CB8899 /* SitesViewModelDelegate.swift in Sources */,
-				81A6272E22B7C32100CB8899 /* AddSiteViewController.swift in Sources */,
 				81A626E622B78BC700CB8899 /* SitesViewModel.swift in Sources */,
 				81FFB4F022BE779A00240581 /* InfoViewController.swift in Sources */,
 				81A6276022B7C97C00CB8899 /* RegisterCommandHandler.swift in Sources */,
@@ -952,30 +974,34 @@
 				8127E7EF22BE5AFB00B58A3C /* ToSViewModelProtocol.swift in Sources */,
 				81A6276B22B7CD9600CB8899 /* SqliteManager.swift in Sources */,
 				81A6276D22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift in Sources */,
-				81A6273022B7C32D00CB8899 /* EditSiteViewController.swift in Sources */,
 				81A6276722B7CD5600CB8899 /* SettingsViewModelProtocol.swift in Sources */,
+				813FAED922C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift in Sources */,
 				81A6274422B7C50400CB8899 /* SiteLogoTableViewCell.swift in Sources */,
 				81FFB4F622BE798A00240581 /* InfoViewModel.swift in Sources */,
 				81A6278322B7CF5300CB8899 /* Site.swift in Sources */,
 				81A6274D22B7C57B00CB8899 /* SiteCategorySectionHeaderView.swift in Sources */,
 				81A6270D22B7A7A400CB8899 /* SettingsCommandHandlerProtocol.swift in Sources */,
 				81A6271022B7B29400CB8899 /* BaseViewController.swift in Sources */,
+				813FAEE622C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift in Sources */,
 				81A6277F22B7CF0D00CB8899 /* Settings.swift in Sources */,
 				81A6277B22B7CEE700CB8899 /* ButtonTableViewCell.swift in Sources */,
 				8127E7D722BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift in Sources */,
 				81A6275B22B7C90800CB8899 /* TextFieldTableViewCell.swift in Sources */,
 				8127E7D322BBD74D00B58A3C /* AuthViewModelProtocol.swift in Sources */,
 				81A6272922B7C2DB00CB8899 /* UpdateSiteViewController.swift in Sources */,
+				813FAEE422C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift in Sources */,
 				81A626E522B78BC700CB8899 /* SitesViewController.swift in Sources */,
 				81A6278622B7D02100CB8899 /* SettingsSwitchTableViewCell.swift in Sources */,
 				81A6271822B7C13F00CB8899 /* ChangePassViewController.swift in Sources */,
 				81A6278A22B7D03B00CB8899 /* SettingsSimpleTableViewCell.swift in Sources */,
 				81A6274822B7C51700CB8899 /* SiteDataTableViewCell.swift in Sources */,
+				813FAED722C29C1A0044CBB8 /* ActivityDataExtension.swift in Sources */,
 				81FFB4F422BE792E00240581 /* InfoViewModelProtocol.swift in Sources */,
 				81FFB4FA22BE95F000240581 /* ChangePassCommandHandlerProtocol.swift in Sources */,
 				81A626EF22B78E8F00CB8899 /* SitesCommandHandler.swift in Sources */,
 				81A6273422B7C3F000CB8899 /* SiteTableViewCell.swift in Sources */,
 				81A6273E22B7C46C00CB8899 /* SiteActionTableViewCell.swift in Sources */,
+				81A0774F22C31D49000E7432 /* UIImageExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,7 +1137,7 @@
 		};
 		81A626BE22B78B8400CB8899 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3874F898F282D8E9CD33BDD3 /* Pods-Lock Bear.debug.xcconfig */;
+			baseConfigurationReference = 0952BD4F1ECA98F18C0EE00D /* Pods-Lock Bear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1133,7 +1159,7 @@
 		};
 		81A626BF22B78B8400CB8899 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6B51E559559EC4F1530A41F /* Pods-Lock Bear.release.xcconfig */;
+			baseConfigurationReference = 80F2371FD328228AA5052EAB /* Pods-Lock Bear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";

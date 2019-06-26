@@ -16,51 +16,56 @@
             <rect key="frame" x="0.0" y="0.0" width="315" height="42"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tbt-CG-WIg">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tbt-CG-WIg">
                     <rect key="frame" x="0.0" y="0.0" width="315" height="42"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RtQ-k3-JEi">
-                    <rect key="frame" x="25" y="3.5" width="35" height="35"/>
+                    <rect key="frame" x="20" y="8.5" width="45" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="35" id="3IR-xq-IYM"/>
-                        <constraint firstAttribute="height" constant="35" id="yTZ-rb-o4G"/>
+                        <constraint firstAttribute="width" constant="45" id="3IR-xq-IYM"/>
+                        <constraint firstAttribute="height" constant="25" id="qDP-yo-mAu"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQb-Ee-dro">
-                    <rect key="frame" x="85" y="10.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="QQb-Ee-dro">
+                    <rect key="frame" x="77" y="9" width="159" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADR-Vc-feV">
-                    <rect key="frame" x="248" y="10.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="110 Sites" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="ADR-Vc-feV">
+                    <rect key="frame" x="248" y="13" width="47" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="47" id="l1f-QI-Mmq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.20000000000000001" green="0.83921568629999999" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="tbt-CG-WIg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0vT-sn-T7g"/>
-                <constraint firstItem="QQb-Ee-dro" firstAttribute="leading" secondItem="RtQ-k3-JEi" secondAttribute="trailing" constant="25" id="BJF-tR-cdX"/>
+                <constraint firstItem="ADR-Vc-feV" firstAttribute="leading" secondItem="QQb-Ee-dro" secondAttribute="trailing" constant="12" id="4dC-E3-d4z"/>
+                <constraint firstItem="QQb-Ee-dro" firstAttribute="leading" secondItem="RtQ-k3-JEi" secondAttribute="trailing" constant="12" id="BJF-tR-cdX"/>
                 <constraint firstItem="ADR-Vc-feV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Foq-rL-vDd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ADR-Vc-feV" secondAttribute="trailing" constant="25" id="Jxs-4F-4UW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ADR-Vc-feV" secondAttribute="trailing" constant="20" id="Jxs-4F-4UW"/>
                 <constraint firstItem="tbt-CG-WIg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Voe-eY-LEe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tbt-CG-WIg" secondAttribute="trailing" id="ZeO-DY-gQd"/>
                 <constraint firstItem="QQb-Ee-dro" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cSK-1g-Bi2"/>
-                <constraint firstItem="RtQ-k3-JEi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="khO-JI-kio"/>
-                <constraint firstItem="RtQ-k3-JEi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="w7z-0g-bUf"/>
+                <constraint firstItem="RtQ-k3-JEi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="w7z-0g-bUf"/>
                 <constraint firstAttribute="bottom" secondItem="tbt-CG-WIg" secondAttribute="bottom" id="z3Z-p0-lcH"/>
+                <constraint firstItem="RtQ-k3-JEi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zkE-So-FiS"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="backgroudImage" destination="tbt-CG-WIg" id="ccV-MM-PXy"/>
-                <outlet property="categoryIcon" destination="RtQ-k3-JEi" id="Tal-PV-sff"/>
-                <outlet property="categoryName" destination="QQb-Ee-dro" id="wYX-33-E11"/>
-                <outlet property="categorySiteCount" destination="ADR-Vc-feV" id="m64-Tp-giq"/>
+                <outlet property="backgroudImageView" destination="tbt-CG-WIg" id="ccV-MM-PXy"/>
+                <outlet property="categoryIconView" destination="RtQ-k3-JEi" id="Tal-PV-sff"/>
+                <outlet property="categoryNameLabel" destination="QQb-Ee-dro" id="wYX-33-E11"/>
+                <outlet property="categorySiteCountLabel" destination="ADR-Vc-feV" id="m64-Tp-giq"/>
             </connections>
-            <point key="canvasLocation" x="50.000000000000007" y="47.209821428571423"/>
+            <point key="canvasLocation" x="50.000000000000007" y="46.875"/>
         </view>
     </objects>
 </document>

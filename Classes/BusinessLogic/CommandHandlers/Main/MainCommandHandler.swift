@@ -15,6 +15,7 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
     private var sitesCommandHandler: SitesCommandHandler
     private var settingsCommandHandler: SettingsCommandHandler
     private var loginCommandHandler: LoginCommandHandler?
+    private var loginWindow: UIWindow?
     
     required init() {
         
@@ -26,13 +27,20 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
         var tabbarControllers: [UIViewController] = []
         if let sitesMainViewController = sitesCommandHandler.mainViewController {
             tabbarControllers.append(sitesMainViewController)
+        }
+        if let settingsMainViewController = settingsCommandHandler.mainViewController {
+            tabbarControllers.append(settingsMainViewController)
+        }
+        
+        mainViewController.viewControllers = tabbarControllers
+        
+        if let _ = sitesCommandHandler.mainViewController {
             
             let sitesItem = mainViewController.tabBar.items?[0]
             sitesItem?.image = UIImage(named: "sites-tabbatItem")
             
         }
         if let settingsMainViewController = settingsCommandHandler.mainViewController {
-            tabbarControllers.append(settingsMainViewController)
             
             let index = tabbarControllers.firstIndex(where: {$0 == settingsMainViewController})
             
@@ -42,8 +50,6 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
             }
             
         }
-        
-        mainViewController.viewControllers = tabbarControllers
         
         self.mainViewController = mainViewController
         
@@ -87,17 +93,24 @@ class MainCommandHandler: LoginCommandHandlerDelegate {
         loginCommandHandler = LoginCommandHandler()
         loginCommandHandler?.delegate = self
         if let loginCommandHandler = loginCommandHandler, let loginMainViewController = loginCommandHandler.mainViewController {
-            mainViewController.present(loginMainViewController, animated: animated, completion: nil)
+            loginWindow = UIWindow(frame: UIScreen.main.bounds)
+            loginWindow?.rootViewController = UIViewController()
+            let topWindow = UIApplication.shared.windows.last
+            loginWindow?.windowLevel = UIWindow.Level(rawValue: UIWindow.Level.RawValue(topWindow?.windowLevel.rawValue ?? 0 + 100))
+            loginWindow?.makeKeyAndVisible()
+            loginWindow?.rootViewController?.present(loginMainViewController, animated: animated, completion: nil)
         }
         
         
     }
     
-    //MARK: - LoginCommandHandlerDelegate
+    //MARK: - LoginCommandHandlerDelegate0
     
     func didDismissLogin() {
         loginCommandHandler?.delegate = nil
         loginCommandHandler = nil
+        loginWindow?.isHidden = true
+        loginWindow = nil
     }
     
 }

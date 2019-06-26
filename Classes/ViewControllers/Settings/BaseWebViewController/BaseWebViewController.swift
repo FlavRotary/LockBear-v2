@@ -2,7 +2,7 @@
 //  BaseWebViewController.swift
 //  Lock Bear
 //
-//  Created by Teodor Rotaru on 22/06/2019.
+//  Created by Flavian Rotaru on 22/06/2019.
 //  Copyright © 2019 Flavian Rotaru. All rights reserved.
 //
 
@@ -26,19 +26,7 @@ class BaseWebViewController: BaseViewController, WKNavigationDelegate{
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         
-        let activityData = ActivityData(size: CGSize(width: 100,height: 100),
-                                        message: "Loading...",
-                                        messageFont: UIFont.boldSystemFont(ofSize: 18.0),
-                                        messageSpacing: nil,
-                                        type: .circleStrokeSpin,
-                                        color: UIColor(red: 51.0/255.0, green: 214.0/255.0, blue: 193.0/255.0, alpha: 1.0),
-                                        padding: 10,
-                                        displayTimeThreshold: nil,
-                                        minimumDisplayTime: nil,
-                                        backgroundColor: UIColor.clear,
-                                        textColor: UIColor(red: 51.0/255.0, green: 214.0/255.0, blue: 193.0/255.0, alpha: 1.0))
-        
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData.shared)
         
     }
     
