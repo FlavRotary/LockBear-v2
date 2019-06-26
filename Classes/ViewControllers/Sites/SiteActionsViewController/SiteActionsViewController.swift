@@ -82,6 +82,13 @@ class SiteActionsViewController: BaseViewController, UITableViewDelegate, UITabl
         tableView.deselectRow(at: indexPath, animated: true)
         self.commandHandler?.didSelectAction(at: indexPath.row)
     }
+    
+    //MARK : - Button Actions
+    
+    @IBAction func emptySpaceAction(_ sender: Any) {
+        self.commandHandler?.didClickOverlay()
+    }
+    
 
     /*
     // MARK: - Navigation
