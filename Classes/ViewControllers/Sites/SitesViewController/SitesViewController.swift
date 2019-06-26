@@ -66,13 +66,19 @@ class SitesViewController: BaseViewController, UITableViewDelegate, UITableViewD
     //SitesViewModelDelegate functions
     
     func sitesViewModelDidStartUpdating(_ sitesViewModel: SitesViewModelProtocol) {
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData.shared)
+        
+        DispatchQueue.main.async {
+            NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData.shared)
+        }
     }
     
     func sitesViewModelDidEndUpdating(_ sitesViewModel: SitesViewModelProtocol) {
-        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
         
-        reloadTable()
+        DispatchQueue.main.async {
+            NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+            
+            self.reloadTable()
+        }
     }
     
     //MARK :- UITableViewDelegates
@@ -144,6 +150,7 @@ class SitesViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         commandHandler?.didSelectSiteAtIndexPath(indexPath)
     }
     

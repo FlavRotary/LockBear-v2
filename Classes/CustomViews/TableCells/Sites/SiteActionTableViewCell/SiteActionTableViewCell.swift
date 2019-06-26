@@ -10,6 +10,8 @@ import UIKit
 
 class SiteActionTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var optionLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

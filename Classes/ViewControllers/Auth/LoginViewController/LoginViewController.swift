@@ -35,6 +35,10 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         
@@ -44,16 +48,8 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         
         NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { (notification) in
             
-            self.updateBiometryView()
+            self.tryBiometricLogin()
             
-            if let viewModel = self.commandHandler?.viewModel {
-                
-                if ((viewModel.settings?.useBioAuth ?? false) == true &&
-                    (viewModel.getBiometryType() == .touchID || viewModel.getBiometryType() == .faceID)) {
-                    
-                    self.commandHandler?.tryBiometricLogin()
-                }
-            }
         }
     }
     
@@ -99,6 +95,18 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
             biometricNameLabel.text = ""
         }
         
+    }
+    
+    func tryBiometricLogin() {
+        
+        if let viewModel = self.commandHandler?.viewModel {
+            
+            if ((viewModel.settings?.useBioAuth ?? false) == true &&
+                (viewModel.getBiometryType() == .touchID || viewModel.getBiometryType() == .faceID)) {
+                
+                self.commandHandler?.tryBiometricLogin()
+            }
+        }
     }
     
     //MARK: - UIButtonActions

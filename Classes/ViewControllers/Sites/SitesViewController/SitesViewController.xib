@@ -36,13 +36,19 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kal-g3-4Li">
                             <rect key="frame" x="20" y="0.0" width="280" height="176"/>
-                            <string key="text">You don’t have any site added yet.The bear is 😢. Please add one and let it safely store it for you.</string>
+                            <string key="text">You don’t have any site added yet.
+
+The bear is 😢. 
+
+Please add one and let it safely store it for you.
+
+</string>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" red="0.20000000000000001" green="0.83921568629999999" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU6-AM-Vvt">
-                            <rect key="frame" x="20" y="186" width="280" height="44"/>
+                            <rect key="frame" x="50" y="186" width="220" height="44"/>
                             <color key="backgroundColor" red="0.20000000000000001" green="0.83921568629999999" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="B7I-dX-aai"/>
@@ -64,11 +70,11 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="kal-g3-4Li" firstAttribute="leading" secondItem="AQW-aS-cBC" secondAttribute="leading" constant="20" id="0gP-4K-hyw"/>
-                        <constraint firstItem="wU6-AM-Vvt" firstAttribute="leading" secondItem="AQW-aS-cBC" secondAttribute="leading" constant="20" id="20G-fZ-EhA"/>
+                        <constraint firstItem="wU6-AM-Vvt" firstAttribute="leading" secondItem="AQW-aS-cBC" secondAttribute="leading" constant="50" id="20G-fZ-EhA"/>
                         <constraint firstAttribute="trailing" secondItem="kal-g3-4Li" secondAttribute="trailing" constant="20" id="YSp-hL-jJX"/>
                         <constraint firstAttribute="bottom" secondItem="wU6-AM-Vvt" secondAttribute="bottom" constant="20" id="efe-AG-KsL"/>
                         <constraint firstItem="wU6-AM-Vvt" firstAttribute="top" secondItem="kal-g3-4Li" secondAttribute="bottom" constant="10" id="lzk-zl-nPD"/>
-                        <constraint firstAttribute="trailing" secondItem="wU6-AM-Vvt" secondAttribute="trailing" constant="20" id="pCe-Zs-fpu"/>
+                        <constraint firstAttribute="trailing" secondItem="wU6-AM-Vvt" secondAttribute="trailing" constant="50" id="pCe-Zs-fpu"/>
                         <constraint firstAttribute="height" constant="250" id="ud1-Nt-BWr"/>
                         <constraint firstItem="kal-g3-4Li" firstAttribute="top" secondItem="AQW-aS-cBC" secondAttribute="top" id="v7a-7N-0f3"/>
                     </constraints>

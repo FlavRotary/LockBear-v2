@@ -22,6 +22,11 @@
 		8127E7F122BE5B3E00B58A3C /* ToSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127E7F022BE5B3E00B58A3C /* ToSViewModel.swift */; };
 		813FAED722C29C1A0044CBB8 /* ActivityDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAED622C29C1A0044CBB8 /* ActivityDataExtension.swift */; };
 		813FAED922C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAED822C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift */; };
+		813FAEDE22C2F3D80044CBB8 /* SiteActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEDD22C2F3D80044CBB8 /* SiteActions.swift */; };
+		813FAEE022C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEDF22C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift */; };
+		813FAEE222C2F5B50044CBB8 /* SiteActionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEE122C2F5B50044CBB8 /* SiteActionsViewModel.swift */; };
+		813FAEE422C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEE322C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift */; };
+		813FAEE622C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813FAEE522C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift */; };
 		81A626B922B78B8400CB8899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A626B722B78B8400CB8899 /* LaunchScreen.storyboard */; };
 		81A626E222B78BC700CB8899 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A626C522B78BC700CB8899 /* LoginViewController.xib */; };
 		81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A626C622B78BC700CB8899 /* LoginViewController.swift */; };
@@ -49,8 +54,6 @@
 		81A6272422B7C25100CB8899 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6272222B7C25100CB8899 /* RegisterViewController.xib */; };
 		81A6272922B7C2DB00CB8899 /* UpdateSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6272722B7C2DB00CB8899 /* UpdateSiteViewController.swift */; };
 		81A6272A22B7C2DB00CB8899 /* UpdateSiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6272822B7C2DB00CB8899 /* UpdateSiteViewController.xib */; };
-		81A6272E22B7C32100CB8899 /* AddSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6272D22B7C32100CB8899 /* AddSiteViewController.swift */; };
-		81A6273022B7C32D00CB8899 /* EditSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6272F22B7C32D00CB8899 /* EditSiteViewController.swift */; };
 		81A6273422B7C3F000CB8899 /* SiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6273222B7C3F000CB8899 /* SiteTableViewCell.swift */; };
 		81A6273522B7C3F000CB8899 /* SiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A6273322B7C3F000CB8899 /* SiteTableViewCell.xib */; };
 		81A6273922B7C42A00CB8899 /* SiteActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6273722B7C42A00CB8899 /* SiteActionsViewController.swift */; };
@@ -117,6 +120,11 @@
 		8127E7F022BE5B3E00B58A3C /* ToSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSViewModel.swift; sourceTree = "<group>"; };
 		813FAED622C29C1A0044CBB8 /* ActivityDataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDataExtension.swift; sourceTree = "<group>"; };
 		813FAED822C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSiteCommandHandlerProtocol.swift; sourceTree = "<group>"; };
+		813FAEDD22C2F3D80044CBB8 /* SiteActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActions.swift; sourceTree = "<group>"; };
+		813FAEDF22C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsViewModelProtocol.swift; sourceTree = "<group>"; };
+		813FAEE122C2F5B50044CBB8 /* SiteActionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsViewModel.swift; sourceTree = "<group>"; };
+		813FAEE322C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsCommandHandlerProtocol.swift; sourceTree = "<group>"; };
+		813FAEE522C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsCommandHandler.swift; sourceTree = "<group>"; };
 		81A626AB22B78B8300CB8899 /* Lock Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lock Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A626B822B78B8400CB8899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81A626BA22B78B8400CB8899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,8 +155,6 @@
 		81A6272222B7C25100CB8899 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		81A6272722B7C2DB00CB8899 /* UpdateSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSiteViewController.swift; sourceTree = "<group>"; };
 		81A6272822B7C2DB00CB8899 /* UpdateSiteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateSiteViewController.xib; sourceTree = "<group>"; };
-		81A6272D22B7C32100CB8899 /* AddSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSiteViewController.swift; sourceTree = "<group>"; };
-		81A6272F22B7C32D00CB8899 /* EditSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSiteViewController.swift; sourceTree = "<group>"; };
 		81A6273222B7C3F000CB8899 /* SiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteTableViewCell.swift; sourceTree = "<group>"; };
 		81A6273322B7C3F000CB8899 /* SiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SiteTableViewCell.xib; sourceTree = "<group>"; };
 		81A6273722B7C42A00CB8899 /* SiteActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteActionsViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				8127E7E122BE456D00B58A3C /* SettingTypeEnums.swift */,
+				813FAEDD22C2F3D80044CBB8 /* SiteActions.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -316,8 +323,6 @@
 		81A626C722B78BC700CB8899 /* Sites */ = {
 			isa = PBXGroup;
 			children = (
-				81A6272C22B7C2F600CB8899 /* AddSiteViewController */,
-				81A6272B22B7C2E600CB8899 /* EditSiteViewController */,
 				81A6272522B7C26200CB8899 /* UpdateSiteViewController */,
 				81A626C822B78BC700CB8899 /* SitesViewController */,
 				81A6273622B7C40B00CB8899 /* SiteActionsViewController */,
@@ -376,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				81A626D322B78BC700CB8899 /* SitesViewModel.swift */,
+				813FAEE122C2F5B50044CBB8 /* SiteActionsViewModel.swift */,
 			);
 			path = Sites;
 			sourceTree = "<group>";
@@ -397,6 +403,8 @@
 				81A626D722B78BC700CB8899 /* SitesViewModelDelegate.swift */,
 				81A626FA22B797D400CB8899 /* SitesCommandHandlerProtocol.swift */,
 				813FAED822C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift */,
+				813FAEDF22C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift */,
+				813FAEE322C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift */,
 			);
 			path = Sites;
 			sourceTree = "<group>";
@@ -478,6 +486,7 @@
 			children = (
 				81A626EE22B78E8F00CB8899 /* SitesCommandHandler.swift */,
 				81A6276122B7C98E00CB8899 /* UpdateSiteCommandHandler.swift */,
+				813FAEE522C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift */,
 			);
 			path = Sites;
 			sourceTree = "<group>";
@@ -601,22 +610,6 @@
 				81A6272822B7C2DB00CB8899 /* UpdateSiteViewController.xib */,
 			);
 			path = UpdateSiteViewController;
-			sourceTree = "<group>";
-		};
-		81A6272B22B7C2E600CB8899 /* EditSiteViewController */ = {
-			isa = PBXGroup;
-			children = (
-				81A6272F22B7C32D00CB8899 /* EditSiteViewController.swift */,
-			);
-			path = EditSiteViewController;
-			sourceTree = "<group>";
-		};
-		81A6272C22B7C2F600CB8899 /* AddSiteViewController */ = {
-			isa = PBXGroup;
-			children = (
-				81A6272D22B7C32100CB8899 /* AddSiteViewController.swift */,
-			);
-			path = AddSiteViewController;
 			sourceTree = "<group>";
 		};
 		81A6273122B7C3D400CB8899 /* SiteTableViewCell */ = {
@@ -942,7 +935,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A6277122B7CDCF00CB8899 /* UIImageViewExtensions.swift in Sources */,
+				813FAEE022C2F5900044CBB8 /* SiteActionsViewModelProtocol.swift in Sources */,
 				81A6275E22B7C95D00CB8899 /* ChangePassCommandHandler.swift in Sources */,
+				813FAEDE22C2F3D80044CBB8 /* SiteActions.swift in Sources */,
 				8127E7D922BD69BA00B58A3C /* UserDefaultsManager.swift in Sources */,
 				81A626EB22B78BC700CB8899 /* AppDelegate.swift in Sources */,
 				81A626E322B78BC700CB8899 /* LoginViewController.swift in Sources */,
@@ -958,11 +953,11 @@
 				81A6279322B7D51F00CB8899 /* LoginCommandHandlerProtocol.swift in Sources */,
 				81A626FB22B797D400CB8899 /* SitesCommandHandlerProtocol.swift in Sources */,
 				8127E7D522BBD75F00B58A3C /* RegisterCommandHandlerProtocol.swift in Sources */,
+				813FAEE222C2F5B50044CBB8 /* SiteActionsViewModel.swift in Sources */,
 				81A6278122B7CF4A00CB8899 /* SiteCategory.swift in Sources */,
 				81A6276F22B7CDBD00CB8899 /* KeychainManager.swift in Sources */,
 				81A6277522B7CE9200CB8899 /* AESCrypter.swift in Sources */,
 				81A626E822B78BC700CB8899 /* SitesViewModelDelegate.swift in Sources */,
-				81A6272E22B7C32100CB8899 /* AddSiteViewController.swift in Sources */,
 				81A626E622B78BC700CB8899 /* SitesViewModel.swift in Sources */,
 				81FFB4F022BE779A00240581 /* InfoViewController.swift in Sources */,
 				81A6276022B7C97C00CB8899 /* RegisterCommandHandler.swift in Sources */,
@@ -980,7 +975,6 @@
 				8127E7EF22BE5AFB00B58A3C /* ToSViewModelProtocol.swift in Sources */,
 				81A6276B22B7CD9600CB8899 /* SqliteManager.swift in Sources */,
 				81A6276D22B7CDAC00CB8899 /* UIAlertViewControllerExtensions.swift in Sources */,
-				81A6273022B7C32D00CB8899 /* EditSiteViewController.swift in Sources */,
 				81A6276722B7CD5600CB8899 /* SettingsViewModelProtocol.swift in Sources */,
 				813FAED922C2B3AD0044CBB8 /* UpdateSiteCommandHandlerProtocol.swift in Sources */,
 				81A6274422B7C50400CB8899 /* SiteLogoTableViewCell.swift in Sources */,
@@ -989,12 +983,14 @@
 				81A6274D22B7C57B00CB8899 /* SiteCategorySectionHeaderView.swift in Sources */,
 				81A6270D22B7A7A400CB8899 /* SettingsCommandHandlerProtocol.swift in Sources */,
 				81A6271022B7B29400CB8899 /* BaseViewController.swift in Sources */,
+				813FAEE622C2F7DF0044CBB8 /* SiteActionsCommandHandler.swift in Sources */,
 				81A6277F22B7CF0D00CB8899 /* Settings.swift in Sources */,
 				81A6277B22B7CEE700CB8899 /* ButtonTableViewCell.swift in Sources */,
 				8127E7D722BD15BB00B58A3C /* RegisterCommandHandlerDelegate.swift in Sources */,
 				81A6275B22B7C90800CB8899 /* TextFieldTableViewCell.swift in Sources */,
 				8127E7D322BBD74D00B58A3C /* AuthViewModelProtocol.swift in Sources */,
 				81A6272922B7C2DB00CB8899 /* UpdateSiteViewController.swift in Sources */,
+				813FAEE422C2F67B0044CBB8 /* SiteActionsCommandHandlerProtocol.swift in Sources */,
 				81A626E522B78BC700CB8899 /* SitesViewController.swift in Sources */,
 				81A6278622B7D02100CB8899 /* SettingsSwitchTableViewCell.swift in Sources */,
 				81A6271822B7C13F00CB8899 /* ChangePassViewController.swift in Sources */,

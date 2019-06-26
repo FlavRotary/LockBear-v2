@@ -11,6 +11,7 @@ import Foundation
 protocol LoginCommandHandlerProtocol : class {
     
     var viewModel: AuthViewModelProtocol {get}
+    var usingBiometricLogin: Bool {get}
     
     func tryBiometricLogin()
     func didPressLogin(_ password: String)

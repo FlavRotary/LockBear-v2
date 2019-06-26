@@ -51,8 +51,21 @@ class SitesViewModel: SitesViewModelProtocol {
     func selectForEditing(_ site: Site) {
         selectedSite = site
     }
-    func deleteSite(_ site: Site) {
-        //code to dele
+    func deleteSite(_ site: Site, _ completion: @escaping ((Error?) -> Void)) {
+        
+        let error = NSError(domain: "com.lockbear", code: 0, userInfo: [NSLocalizedDescriptionKey:"Site not found."])
+        
+        if let sitesTable = sqlManager?.sitesTable {
+            
+            DispatchQueue.global().async {
+                let success = self.sqlManager?.deleteIn(sitesTable, site)
+                self.updateData()
+                completion(success == false ? error : nil)
+            }
+            
+        } else {
+            completion(error)
+        }
     }
     
     func saveSelectedSite(with completion: @escaping ((Error?) -> Void)) {

@@ -18,5 +18,5 @@ protocol SitesViewModelProtocol: class {
     func selectNewSite()
     func selectForEditing(_ site: Site)
     func saveSelectedSite(with completion: @escaping((Error?) -> Void))
-    func deleteSite(_ site: Site)
+    func deleteSite(_ site: Site, _ completion: @escaping ((Error?) -> Void))
 }

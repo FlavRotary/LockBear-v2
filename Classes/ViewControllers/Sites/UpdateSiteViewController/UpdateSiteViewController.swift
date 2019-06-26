@@ -24,6 +24,7 @@ class UpdateSiteViewController: BaseViewController, UITextFieldDelegate, UIPicke
     
     var commandHandler: UpdateSiteCommandHandlerProtocol?
     weak var firstResponder: UITextField?
+    var firstResponderLabelText: String?
     private var picker: UIPickerView?
     var selectedCategory: SiteCategory?
 
@@ -135,6 +136,11 @@ class UpdateSiteViewController: BaseViewController, UITextFieldDelegate, UIPicke
             picker?.reloadAllComponents()
         }
         
+        if let textField = textField as? GBTextField {
+            firstResponderLabelText = textField.labelText
+            textField.labelText = " "
+        }
+        
         return true
     }
     
@@ -145,7 +151,9 @@ class UpdateSiteViewController: BaseViewController, UITextFieldDelegate, UIPicke
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
+        
         if let textField = textField as? GBTextField {
+            
             switch textField {
             case siteNameTextField:
                 textField.leftImage = UIImage(named: "site_name_icon_selected")
@@ -206,6 +214,15 @@ class UpdateSiteViewController: BaseViewController, UITextFieldDelegate, UIPicke
         }
         
         return false
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if let textField = textField as? GBTextField {
+            textField.labelText = firstResponderLabelText ?? ""
+        }
+        
+        return true
     }
     
     //MARK:-
